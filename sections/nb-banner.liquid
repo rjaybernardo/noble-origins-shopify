@@ -23,7 +23,13 @@
     line-height: 110%;
   }
   .banner__button {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    padding: 25px 40px;
   }
+
   .ratings__block {
     display: flex;
     align-items: center;
@@ -32,6 +38,12 @@
   }
   .ratings__block .star {
     color: #ffb400;
+  }
+  .ratings__text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
   }
 </style>
 {% assign scheme1 = settings.color_schemes | first %}
@@ -119,7 +131,7 @@
                     <span class="star rated">&#9733;</span>
                   {% endfor %}
                 </div>
-                <p class="ratings-paragraph">
+                <p class="ratings__text">
                   {{ block.settings.paragraph_text | escape }}
                 </p>
               </div>
