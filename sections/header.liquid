@@ -296,13 +296,7 @@
       class="header__icon header__icon--cart link focus-inset small-hide"
       id="cart-icon-bubble"
     >
-      {%- liquid
-        if cart == empty
-          render 'icon-cart-empty'
-        else
-          render 'icon-cart-desktop'
-        endif
-      -%}
+      {%- render 'icon-cart-desktop' -%}
       <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
       {%- if cart != empty -%}
         <div class="cart-count-bubble">
