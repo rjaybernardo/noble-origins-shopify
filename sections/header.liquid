@@ -203,7 +203,7 @@
             settings.logo_desktop
             | image_url: width: 600
             | image_tag:
-              class: 'header__heading-logo motion-reduce',
+              class: 'header__heading-logo motion-reduce small-hide',
               widths: widths,
               height: logo_height,
               width: settings.logo_width,
@@ -212,6 +212,7 @@
               preload: true
           }}
         </div>
+
       {%- else -%}
         <span class="h2">{{ shop.name }}</span>
       {%- endif -%}
