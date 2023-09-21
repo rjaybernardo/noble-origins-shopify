@@ -1,49 +1,60 @@
 {
   "sections": {
-    "6d508459-726c-44ac-b53c-e82240acaf86": {
-      "type": "rich-text",
+    "00f1ac00-317f-4c9e-8cf7-179ee90d0bed": {
+      "type": "nb-banner",
       "blocks": {
-        "template--21011802390846__6d508459-726c-44ac-b53c-e82240acaf86-heading-1": {
+        "template--21039849799998__00f1ac00-317f-4c9e-8cf7-179ee90d0bed-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "From Farm to Glass!",
             "heading_size": "h1"
           }
         },
-        "template--21011802390846__6d508459-726c-44ac-b53c-e82240acaf86-text-1": {
+        "template--21039849799998__00f1ac00-317f-4c9e-8cf7-179ee90d0bed-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "Drink the health of nature.",
+            "text_style": "body"
           }
         },
-        "template--21011802390846__6d508459-726c-44ac-b53c-e82240acaf86-button-1": {
+        "template--21039849799998__00f1ac00-317f-4c9e-8cf7-179ee90d0bed-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Try Noble Now!",
             "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary": false
+          }
+        },
+        "template--21039849799998__00f1ac00-317f-4c9e-8cf7-179ee90d0bed-ratings-1": {
+          "type": "ratings",
+          "settings": {
+            "ratings": 5,
+            "paragraph_text": "4.9\/5 Rated by 10,000+ Happy Customers"
           }
         }
       },
       "block_order": [
-        "template--21011802390846__6d508459-726c-44ac-b53c-e82240acaf86-heading-1",
-        "template--21011802390846__6d508459-726c-44ac-b53c-e82240acaf86-text-1",
-        "template--21011802390846__6d508459-726c-44ac-b53c-e82240acaf86-button-1"
+        "template--21039849799998__00f1ac00-317f-4c9e-8cf7-179ee90d0bed-heading-1",
+        "template--21039849799998__00f1ac00-317f-4c9e-8cf7-179ee90d0bed-text-1",
+        "template--21039849799998__00f1ac00-317f-4c9e-8cf7-179ee90d0bed-button-1",
+        "template--21039849799998__00f1ac00-317f-4c9e-8cf7-179ee90d0bed-ratings-1"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "6d508459-726c-44ac-b53c-e82240acaf86"
+    "00f1ac00-317f-4c9e-8cf7-179ee90d0bed"
   ]
 }
