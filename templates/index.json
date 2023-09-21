@@ -119,10 +119,28 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
+    },
+    "52a84181-9386-4cb1-90e8-bde024841882": {
+      "type": "nb-unlock",
+      "settings": {
+        "heading": "Top whey Supplement  Issues everyone Should know!",
+        "heading_size": "h1",
+        "caption": "Unlock the truth:",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "text": "<p>Discover the most common issues with whey protein and our top tips to ensure you get the best out of your supplement. Don't let these pitfalls hinder your health journey!<\/p>",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
     "00f1ac00-317f-4c9e-8cf7-179ee90d0bed",
-    "505f0592-bd9a-4464-861a-968aab0672fd"
+    "505f0592-bd9a-4464-861a-968aab0672fd",
+    "52a84181-9386-4cb1-90e8-bde024841882"
   ]
 }
