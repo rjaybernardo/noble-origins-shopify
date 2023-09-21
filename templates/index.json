@@ -52,9 +52,77 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "505f0592-bd9a-4464-861a-968aab0672fd": {
+      "type": "nb-icon-text",
+      "blocks": {
+        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/leaf_1.svg",
+            "title": "",
+            "text": "<p>Natural Ingredients<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/muscles_1.svg",
+            "title": "",
+            "text": "<p>Enhances Performance <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/planet-earth_1.svg",
+            "title": "",
+            "text": "<p>Regenerative Farming<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "995758a4-b944-42e4-a978-00c9c988a32b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gluten-free_1.svg",
+            "title": "",
+            "text": "<p>Allergen-Free & Gut-Friendly<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-1",
+        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-2",
+        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-3",
+        "995758a4-b944-42e4-a978-00c9c988a32b"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
     }
   },
   "order": [
-    "00f1ac00-317f-4c9e-8cf7-179ee90d0bed"
+    "00f1ac00-317f-4c9e-8cf7-179ee90d0bed",
+    "505f0592-bd9a-4464-861a-968aab0672fd"
   ]
 }
