@@ -38,9 +38,9 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
-  .header{
-  background: #FFF;
-  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.20);
+  .header-wrapper{
+  background: #FFF !important;
+  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.20) !important;
   }
   img.header__heading-logo{
   width: min(100%,400px);
@@ -163,11 +163,11 @@
 {% if section.settings.sticky_header_type != 'none' %}
   <sticky-header
     data-sticky-type="{{ section.settings.sticky_header_type }}"
-    class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
+    class=" header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
   >
 {% else %}
   <div
-    class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
+    class=" header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
   >
 {% endif %}
 
