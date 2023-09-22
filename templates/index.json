@@ -462,7 +462,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "button_label": "",
         "button_link": "",
@@ -480,9 +480,9 @@
           "type": "column",
           "settings": {
             "ratings": 5,
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "customer": "John Doe",
+            "title": "No bloat!",
+            "text": "<p>“Before Noble, I felt bloated with other proteins. Now? No bloat! I feel great. This protein is different. It's clean and pure. My gut thanks me every day. Best choice I made!”<\/p>",
+            "customer": "JakeM_91",
             "verified_buyer": "Verified Buyer",
             "link_label": "",
             "link": ""
@@ -492,9 +492,9 @@
           "type": "column",
           "settings": {
             "ratings": 5,
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "customer": "John Doe",
+            "title": "Love it",
+            "text": "<p>“I always wanted a protein that's easy on my stomach. Found it with Noble! No more tummy issues. Plus, my hair and nails look amazing. It's the real deal. Love it”<\/p>",
+            "customer": "FitLizzy23",
             "verified_buyer": "Verified Buyer",
             "link_label": "",
             "link": ""
@@ -504,9 +504,9 @@
           "type": "column",
           "settings": {
             "ratings": 5,
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "customer": "John Doe",
+            "title": "Pure Protein",
+            "text": "<p>\"I'm big on clean eating. Noble fits right in. No bad stuff, just good protein. I feel energized and strong. Those old protein shakes? Gone! Noble is now my go-to.\"<\/p>",
+            "customer": "HealthGuruTom",
             "verified_buyer": "Verified Buyer",
             "link_label": "",
             "link": ""
