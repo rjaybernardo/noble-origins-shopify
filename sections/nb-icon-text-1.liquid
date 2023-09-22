@@ -107,11 +107,18 @@
                   <!-- Placeholder SVG from Snippets -->
                   <div class="nb-icon">{% render 'icon-placeholder' %}</div>
                 {% endif %}
-                {%- if block.settings.text != blank -%}
-                  <div class="nb-text ">
-                    {{ block.settings.text }}
-                  </div>
-                {%- endif -%}
+                <div class="nb-text-container">
+                  {%- if block.settings.title != blank -%}
+                    <div class="nb-title ">
+                      {{ block.settings.title }}
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <div class="nb-text ">
+                      {{ block.settings.text }}
+                    </div>
+                  {%- endif -%}
+                </div>
               </div>
             </div>
           </li>
