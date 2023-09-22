@@ -136,11 +136,80 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "22e340f6-532f-4a4e-9f80-52c8393f007a": {
+      "type": "nb-beyond",
+      "blocks": {
+        "b3033007-db88-4237-ab1a-71e154086efa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/center-placeholder.svg",
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "a3162e14-7ad5-42c3-86ce-81d7b5bc98f5": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/center-placeholder.svg",
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "ab8800b0-519d-4854-a98d-0b2b66b67810": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/center-placeholder.svg",
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "d85914d8-a45e-41fb-bb68-d278e2929858": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/center-placeholder.svg",
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b3033007-db88-4237-ab1a-71e154086efa",
+        "a3162e14-7ad5-42c3-86ce-81d7b5bc98f5",
+        "ab8800b0-519d-4854-a98d-0b2b66b67810",
+        "d85914d8-a45e-41fb-bb68-d278e2929858"
+      ],
+      "settings": {
+        "heading": "Beyond Traditional Whey: Unmasking Common Pitfalls",
+        "heading_size": "h1",
+        "text": "<p>Many have treaded the path of generic whey supplements, only to face hurdles like bloating, artificial additives, and lackluster results. Discover how Noble Origins rises above these common pitfalls, offering a solution that's both effective and pure.<\/p>",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "00f1ac00-317f-4c9e-8cf7-179ee90d0bed",
     "505f0592-bd9a-4464-861a-968aab0672fd",
-    "52a84181-9386-4cb1-90e8-bde024841882"
+    "52a84181-9386-4cb1-90e8-bde024841882",
+    "22e340f6-532f-4a4e-9f80-52c8393f007a"
   ]
 }
