@@ -53,10 +53,10 @@
         "padding_bottom": 0
       }
     },
-    "505f0592-bd9a-4464-861a-968aab0672fd": {
-      "type": "nb-icon-text",
+    "9663f077-58ab-461e-9267-fae84d650595": {
+      "type": "nb-icon-text-1",
       "blocks": {
-        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-1": {
+        "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-1": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/leaf_1.svg",
@@ -66,42 +66,42 @@
             "link": ""
           }
         },
-        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-2": {
+        "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-2": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/muscles_1.svg",
-            "title": "",
-            "text": "<p>Enhances Performance <\/p>",
+            "title": "Enhances Performance",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-3": {
+        "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-3": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/planet-earth_1.svg",
-            "title": "",
-            "text": "<p>Regenerative Farming<\/p>",
+            "title": "Regenerative Farming",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "995758a4-b944-42e4-a978-00c9c988a32b": {
+        "17832638-7d03-466e-bd44-228984f8d1aa": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/gluten-free_1.svg",
-            "title": "",
-            "text": "<p>Allergen-Free & Gut-Friendly<\/p>",
+            "title": "Allergen-Free & Gut-Friendly",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-1",
-        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-2",
-        "template--21039849799998__505f0592-bd9a-4464-861a-968aab0672fd-column-3",
-        "995758a4-b944-42e4-a978-00c9c988a32b"
+        "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-1",
+        "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-2",
+        "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-3",
+        "17832638-7d03-466e-bd44-228984f8d1aa"
       ],
       "settings": {
         "title": "",
@@ -116,8 +116,8 @@
         "color_scheme": "accent-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 4,
-        "padding_bottom": 4
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "52a84181-9386-4cb1-90e8-bde024841882": {
@@ -186,8 +186,8 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "22e340f6-532f-4a4e-9f80-52c8393f007a": {
@@ -275,10 +275,10 @@
         "padding_bottom": 36
       }
     },
-    "cdf5e199-034c-415f-bc15-210a00c0850f": {
-      "type": "nb-icon-text",
+    "3ce3c577-b76e-45bb-ba8b-53e77e606fdc": {
+      "type": "nb-icon-text-2",
       "blocks": {
-        "template--21039849799998__cdf5e199-034c-415f-bc15-210a00c0850f-column-1": {
+        "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-1": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/plant_1.svg",
@@ -288,7 +288,7 @@
             "link": ""
           }
         },
-        "template--21039849799998__cdf5e199-034c-415f-bc15-210a00c0850f-column-2": {
+        "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-2": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/meat_1.png",
@@ -298,7 +298,7 @@
             "link": ""
           }
         },
-        "template--21039849799998__cdf5e199-034c-415f-bc15-210a00c0850f-column-3": {
+        "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-3": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/muscles_1_1.svg",
@@ -308,7 +308,7 @@
             "link": ""
           }
         },
-        "c24c6e25-7eb2-4ea6-b595-f2e59c0e1237": {
+        "393f99eb-98a9-4df8-9198-4215acc1a075": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/guts_1.svg",
@@ -320,10 +320,10 @@
         }
       },
       "block_order": [
-        "template--21039849799998__cdf5e199-034c-415f-bc15-210a00c0850f-column-1",
-        "template--21039849799998__cdf5e199-034c-415f-bc15-210a00c0850f-column-2",
-        "template--21039849799998__cdf5e199-034c-415f-bc15-210a00c0850f-column-3",
-        "c24c6e25-7eb2-4ea6-b595-f2e59c0e1237"
+        "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-1",
+        "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-2",
+        "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-3",
+        "393f99eb-98a9-4df8-9198-4215acc1a075"
       ],
       "settings": {
         "title": "",
@@ -338,6 +338,270 @@
         "color_scheme": "accent-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "f9e001d7-96d0-4bbc-915a-d6372ee9bec6": {
+      "type": "nb-product",
+      "blocks": {
+        "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "It Works When Others Don't!",
+            "heading_size": "h1"
+          }
+        },
+        "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Have other products let you down? Try ours! It's made to fix common problems. Say goodbye to past failures and hello to real solutions<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Order Now & SAVE!",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-heading-1",
+        "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-text-1",
+        "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-button-1"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "48700bc5-8f65-44c4-a522-c54138094035": {
+      "type": "nb-video",
+      "blocks": {
+        "template--21039849799998__48700bc5-8f65-44c4-a522-c54138094035-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "See Noble Origins in Action: All Good Stuff, No Tricks!",
+            "heading_size": "h1"
+          }
+        },
+        "template--21039849799998__48700bc5-8f65-44c4-a522-c54138094035-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Want to know what's in Noble Origins? It's all the best bits from animals. Pure and simple nutrition. Watch and learn!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21039849799998__48700bc5-8f65-44c4-a522-c54138094035-heading-1",
+        "template--21039849799998__48700bc5-8f65-44c4-a522-c54138094035-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "9ef23cae-2267-4cc4-adf6-1285d235762d": {
+      "type": "nb-icon-text-3",
+      "blocks": {
+        "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_2_1.svg",
+            "title": "Made in the USA",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Artboard_3_2_2.png",
+            "title": "Unchanged and authentic",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Artboard_3_4.png",
+            "title": "State of the art Manufacturing",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-1",
+        "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-2",
+        "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "58080fc3-5a56-4ffd-91f2-1e8d81d167b0": {
+      "type": "nb-social-proof",
+      "blocks": {
+        "template--21039849799998__58080fc3-5a56-4ffd-91f2-1e8d81d167b0-column-1": {
+          "type": "column",
+          "settings": {
+            "ratings": 5,
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "customer": "John Doe",
+            "verified_buyer": "Verified Buyer",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21039849799998__58080fc3-5a56-4ffd-91f2-1e8d81d167b0-column-2": {
+          "type": "column",
+          "settings": {
+            "ratings": 5,
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "customer": "John Doe",
+            "verified_buyer": "Verified Buyer",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--21039849799998__58080fc3-5a56-4ffd-91f2-1e8d81d167b0-column-3": {
+          "type": "column",
+          "settings": {
+            "ratings": 5,
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "customer": "John Doe",
+            "verified_buyer": "Verified Buyer",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21039849799998__58080fc3-5a56-4ffd-91f2-1e8d81d167b0-column-1",
+        "template--21039849799998__58080fc3-5a56-4ffd-91f2-1e8d81d167b0-column-2",
+        "template--21039849799998__58080fc3-5a56-4ffd-91f2-1e8d81d167b0-column-3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "e3493cd4-82b6-4f01-8df7-f5497146e455": {
+      "type": "nb-faq",
+      "blocks": {
+        "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is it sourced?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "We source from farms in New Zealand?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is it made?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is silicon dioxide?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "e02f389b-3d9d-4a8f-a3b6-d380edc74e82": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it tested?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-1",
+        "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-2",
+        "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-3",
+        "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-4",
+        "e02f389b-3d9d-4a8f-a3b6-d380edc74e82"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Got Questions? We've Got Answers!",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -345,9 +609,14 @@
   },
   "order": [
     "00f1ac00-317f-4c9e-8cf7-179ee90d0bed",
-    "505f0592-bd9a-4464-861a-968aab0672fd",
+    "9663f077-58ab-461e-9267-fae84d650595",
     "52a84181-9386-4cb1-90e8-bde024841882",
     "22e340f6-532f-4a4e-9f80-52c8393f007a",
-    "cdf5e199-034c-415f-bc15-210a00c0850f"
+    "3ce3c577-b76e-45bb-ba8b-53e77e606fdc",
+    "f9e001d7-96d0-4bbc-915a-d6372ee9bec6",
+    "48700bc5-8f65-44c4-a522-c54138094035",
+    "9ef23cae-2267-4cc4-adf6-1285d235762d",
+    "58080fc3-5a56-4ffd-91f2-1e8d81d167b0",
+    "e3493cd4-82b6-4f01-8df7-f5497146e455"
   ]
 }
