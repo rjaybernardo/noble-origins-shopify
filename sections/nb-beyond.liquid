@@ -15,7 +15,55 @@
     }
   }
 {%- endstyle -%}
+<style>
+  .beyond__header {
+    color: #101012;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    text-transform: capitalize;
+  }
+  .beyond__description {
+    color: #3f3f46;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .beyond__card {
+    position: relative;
+    background: #18181b;
+    color: white;
+    opacity: 0.9;
+  }
 
+  .beyond__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px);
+    z-index: -1;
+  }
+  .beyond__card--header {
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+  }
+  .beyond__card--text {
+    color: #d1d1d6;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+</style>
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign show_mobile_slider = false
@@ -50,7 +98,7 @@
         data-cascade
       {% endif %}
     >
-      <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+      <div class="{{ section.settings.content_alignment }}">
         <p
           class="unlock-caption rich-text__caption {{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ settings.shopify_attributes }}
@@ -62,7 +110,7 @@
           {{ section.settings.caption | escape }}
         </p>
         <h2
-          class="unlock-header rich-text__heading rte inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="beyond__header rich-text__heading rte inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ section.shopify_attributes }}
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
@@ -72,7 +120,7 @@
           {{ section.settings.heading }}
         </h2>
         <div
-          class="unlock-description rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="beyond__description rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
@@ -161,12 +209,12 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info">
+              <div class="beyond__card multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                  <h3 class="beyond__card--header inline-richtext">{{ block.settings.title }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
+                  <div class="beyond__card--text rte">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a
