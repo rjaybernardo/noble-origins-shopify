@@ -60,8 +60,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/leaf_1.svg",
-            "title": "",
-            "text": "<p>Natural Ingredients<\/p>",
+            "title": "Natural Ingredients",
+            "text": "",
             "link_label": "",
             "link": ""
           }
