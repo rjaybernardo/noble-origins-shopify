@@ -15,8 +15,9 @@
   }
 {%- endstyle -%}
 <style>
-  .nb-icon-container {
+  .nb-icon-container-3 {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
   }
@@ -24,12 +25,11 @@
     width: 64px;
     height: 64px;
   }
-  .nb-text {
-    font-size: 18px;
+  .nb-title-3 {
+    font-size: 24px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    text-transform: lowercase;
+    font-weight: 700;
+    line-height: 110%;
   }
 </style>
 {%- liquid
@@ -93,7 +93,7 @@
             {% endif %}
           >
             <div class="multicolumn-card content-container">
-              <div class="nb-icon-container multicolumn-card__info">
+              <div class="nb-icon-container-3 multicolumn-card__info">
                 {% if block.settings.image != blank %}
                   <img
                     src="{{ block.settings.image | image_url }}"
@@ -109,7 +109,7 @@
                 {% endif %}
                 <div class="nb-text-container">
                   {%- if block.settings.title != blank -%}
-                    <div class="nb-title ">
+                    <div class="nb-title-3 ">
                       {{ block.settings.title }}
                     </div>
                   {%- endif -%}
