@@ -37,6 +37,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 110%;
+    width: 80%;
+    margin: 0 auto;
   }
   .unlock__card--header {
     color: #0a0a0a;
@@ -87,7 +89,7 @@
         data-cascade
       {% endif %}
     >
-      <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+      <div class="{{ section.settings.content_alignment }}">
         <p
           class="unlock__caption rich-text__caption {{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ settings.shopify_attributes }}
