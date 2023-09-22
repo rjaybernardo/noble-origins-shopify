@@ -15,16 +15,27 @@
   }
 {%- endstyle -%}
 <style>
-  .nb-icon-container {
+  .nb-icon-container-2 {
     display: flex;
     align-items: center;
     gap: 10px;
+    height: 100%;
+    padding: 0 !important;
   }
   .nb-icon {
     width: 64px;
     height: 64px;
   }
-  .nb-text {
+  .nb-title-2 {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: lowercase;
+  }
+  .nb-text-2 {
+    color: #a0a0ab;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -93,7 +104,7 @@
             {% endif %}
           >
             <div class="multicolumn-card content-container">
-              <div class="nb-icon-container multicolumn-card__info">
+              <div class="nb-icon-container-2 multicolumn-card__info">
                 {% if block.settings.image != blank %}
                   <img
                     src="{{ block.settings.image | image_url }}"
@@ -109,12 +120,12 @@
                 {% endif %}
                 <div class="nb-text-container">
                   {%- if block.settings.title != blank -%}
-                    <div class="nb-title ">
+                    <div class="nb-title-2 ">
                       {{ block.settings.title }}
                     </div>
                   {%- endif -%}
                   {%- if block.settings.text != blank -%}
-                    <div class="nb-text ">
+                    <div class="nb-text-2 ">
                       {{ block.settings.text }}
                     </div>
                   {%- endif -%}
