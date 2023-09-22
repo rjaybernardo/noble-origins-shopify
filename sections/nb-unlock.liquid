@@ -15,7 +15,44 @@
     }
   }
 {%- endstyle -%}
+<style>
+  .unlock__caption {
+    color: #c20004;
 
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+  }
+  .unlock__header {
+    color: #18181b;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    text-transform: capitalize;
+  }
+  .unlock__description {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+  }
+  .unlock__card--header {
+    color: #0a0a0a;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+  }
+  .unlock__card--text {
+    color: #505050;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+</style>
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign show_mobile_slider = false
@@ -52,7 +89,7 @@
     >
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         <p
-          class="unlock-caption rich-text__caption {{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="unlock__caption rich-text__caption {{ section.settings.text_style }} {{ section.settings.text_style }}--{{ section.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ settings.shopify_attributes }}
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
@@ -62,7 +99,7 @@
           {{ section.settings.caption | escape }}
         </p>
         <h2
-          class="unlock-header rich-text__heading rte inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="unlock__header rich-text__heading rte inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ section.shopify_attributes }}
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
@@ -72,7 +109,7 @@
           {{ section.settings.heading }}
         </h2>
         <div
-          class="unlock-description rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="unlock__description rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
@@ -163,10 +200,10 @@
               {%- endif -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                  <h3 class="inline-richtext unlock__card--header">{{ block.settings.title }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
+                  <div class="rte unlock__card--text">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a
