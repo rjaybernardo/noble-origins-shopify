@@ -14,20 +14,36 @@
   }
 {%- endstyle -%}
 <style>
-  .video__header {
-    color: #18181b;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 110%;
-    text-transform: capitalize;
+    .video__header {
+      color: #18181b;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+      text-transform: capitalize;
+    }
+    .video__text {
+      color: #101012;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+    .video-container{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    }
+    video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  .video__text {
-    color: #101012;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+  .video-section__media.video-section__updated[loaded="true"] {
+    margin-bottom: -{{ 1 | divided_by: section.settings.video.preview_image.aspect_ratio | times: 100 }}%;
   }
 </style>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
@@ -103,6 +119,8 @@
                   </a>
                 {%- endif -%}
               </div>
+            {%- when video -%}
+              <h1>{{ block.settings.video }}</h1>
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -336,6 +354,17 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    },
+    {
+      "type": "product_video",
+      "name": "Product Video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Noble Origins Product Video"
         }
       ]
     }

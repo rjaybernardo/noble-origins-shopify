@@ -1,13 +1,36 @@
 @font-face {
-  font-family: 'Bebas Neue Pro';
-  src: url('BebasNeueProBold.woff2') format('woff2'),
-      url('BebasNeueProBold.woff') format('woff');
-  font-weight: bold;
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue-Regular.woff2') format('woff2'),
+      url('BebasNeue-Regular.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-
+@font-face {
+  font-family: 'League Spartan';
+  src: url('LeagueSpartan-Medium.woff2') format('woff2'),
+      url('LeagueSpartan-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'League Spartan';
+  src: url('LeagueSpartan-ExtraBold.woff2') format('woff2'),
+      url('LeagueSpartan-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'League Spartan';
+  src: url('LeagueSpartan-Regular.woff2') format('woff2'),
+      url('LeagueSpartan-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
