@@ -45,8 +45,8 @@
     .product__video
   {
     position: relative;
-    height: 500px;
-    width: 500px;
+    min-height: 500px;
+    width: min(90%,500px);
     margin: 50px auto 0;
     }
 </style>
@@ -149,13 +149,9 @@
   },
   "settings": [
     {
-      "type": "header",
-      "content": "Video"
-    },
-    {
       "type": "video",
       "id": "video",
-      "label": "Video"
+      "label": "Product Video"
     },
     {
       "type": "select",
@@ -374,17 +370,6 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
-        }
-      ]
-    },
-    {
-      "type": "video",
-      "name": "Product Video",
-      "settings": [
-        {
-          "type": "video",
-          "id": "video",
-          "label": "Noble Origins Product Video"
         }
       ]
     }
