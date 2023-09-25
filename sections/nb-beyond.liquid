@@ -16,6 +16,9 @@
   }
 {%- endstyle -%}
 <style>
+  .beyond-section {
+    margin-bottom: 80px;
+  }
   .beyond__header {
     color: #101012;
     font-size: 48px;
@@ -31,11 +34,16 @@
     font-weight: 400;
     line-height: 150%;
   }
-  .beyond__card {
+  .beyond__content--container {
     position: relative;
+  }
+  .beyond__card {
+    position: absolute;
     background: #18181b;
     color: white;
-    opacity: 0.9;
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
   }
 
   .beyond__card::before {
@@ -73,7 +81,7 @@
 -%}
 
 <div
-  class="isolate{% unless section.settings.full_width %} page-width{% endunless %}"
+  class="beyond-section isolate{% unless section.settings.full_width %} page-width{% endunless %}"
 >
   <div
     class="
@@ -165,7 +173,7 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container">
+            <div class="beyond__content--container multicolumn-card content-container">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
