@@ -154,14 +154,37 @@
         id="ImageWithText--{{ section.id }}"
         class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
       >
-        {%- if product != blank -%}
-          <h2 class="product__header image-with-text__heading inline-richtext">{{ product.title }}</h2>
-          {%- if product.description != blank -%}
-            <p class="product__text image-with-text__text image-with-text__text--caption">
-              {{ product.description }}
-            </p>
-          {%- endif -%}
+        {% comment %} ratings, header and description here {% endcomment %}
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {%- when 'ratings' -%}
+              <div class="ratings-block mobile">
+                {% assign rating = block.settings.ratings | round %}
+                <div class="star-rating">
+                  {% for i in (1..rating) %}
+                    <span class="star rated">&#9733;</span>
+                  {% endfor %}
+                </div>
+                <p class="ratings-paragraph">
+                  {{ block.settings.paragraph_text | escape }}
+                </p>
+              </div>
+            {%- when 'heading' -%}
+              <h2
+                class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.heading }}
+              </h2>
 
+            {%- when 'text' -%}
+              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+
+        {%- if product != blank -%}
           {% form 'product', product %}
             <input
               class="main-product-id hide"
@@ -532,6 +555,28 @@
     }
   ],
   "blocks": [
+    {
+      "type": "ratings",
+      "name": "Ratings Block",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "range",
+          "id": "ratings",
+          "default": 5,
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Rating"
+        },
+        {
+          "type": "text",
+          "id": "paragraph_text",
+          "default": "4.9/5 Rated by 10,000+ Happy Customers",
+          "label": "Paragraph Text"
+        }
+      ]
+    },
     {
       "type": "heading",
       "name": "t:sections.image-with-text.blocks.heading.name",
