@@ -241,7 +241,7 @@
               class="main-product-add"
             >
               {% if product.selected_or_first_available_variant.available %}
-                <p>Add to Cart</p>
+                <p>{{ section.settings.button_text }}</p>
               {% else %}
                 Out of Stock
               {% endif %}
@@ -356,6 +356,12 @@
       "type": "product",
       "label": "Select Product",
       "id": "selected_product"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Order Now & SAVE!"
     },
     {
       "type": "select",
