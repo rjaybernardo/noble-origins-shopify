@@ -41,6 +41,17 @@
     justify-content: center;
     padding: 0 !important;
     }
+    .bundle-option{
+    border: 0 !important;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 5px;
+    }
+    .bundle-option img{
+    display: block;
+    margin: 5px 0;
+    }
+
     /* Add this CSS to your theme's stylesheet */
     /* Hide radio buttons */
     input[type='radio'] {
@@ -67,7 +78,9 @@
     .main-product-option-radios {
     display: flex;
     gap: 10px;
+    align-items: flex-end;
   }
+
 
   .main-product-option-radio label {
     display: inline-block;
@@ -184,70 +197,47 @@
           {%- endcase -%}
         {%- endfor -%}
 
-        {%- if product != blank -%}
-          {% form 'product', product %}
-            <input
-              class="main-product-id hide"
-              type="hidden"
-              name="id"
-              value="{{ product.selected_or_first_available_variant.id }}"
-            >
-            {% if product.variants.size > 1 %}
-              <div class="main-product-options">
-                {% for option in product.options_with_values %}
-                  <fieldset class="main-product-option">
-                    <legend>{{ option.name }}</legend>
-                    <div class="main-product-option-radios">
-                      {% for value in option.values %}
-                        <div class="main-product-option-radio">
-                          <input
-                            {% if option.selected_value == value %}
-                              checked
-                            {% endif %}
-                            type="radio"
-                            name="{{ option.name }}"
-                            value="{{ value }}"
-                            class="hide "
-                            id="{{ option.name | handle }}-{{ value | handle }}"
+        {% if product.variants.size > 1 %}
+          <div class="main-product-options">
+            {% for option in product.options_with_values %}
+              <fieldset class="main-product-option">
+                <legend>{{ option.name }}</legend>
+                <div class="main-product-option-radios">
+                  {% for value in option.values %}
+                    <div class="main-product-option-radio">
+                      <input
+                        {% if option.selected_value == value %}
+                          checked
+                        {% endif %}
+                        type="radio"
+                        name="{{ option.name }}"
+                        value="{{ value }}"
+                        class="hide"
+                        id="{{ option.name | handle }}-{{ value | handle }}"
+                      >
+                      <label
+                        class="{% if option.name == 'Subscription' %}subscription-option{% endif %}{% if option.name == 'Bundle' %}bundle-option{% endif %}"
+                        for="{{ option.name | handle }}-{{ value | handle }}"
+                      >
+                        {% if option.name == 'Bundle' %}
+                          <img
+                            src="{{ 'p' | append: value | append: '.png' | asset_url }}"
+                            width="auto"
+                            height="auto"
+                            loading="lazy"
+                            alt="{{ value }}"
                           >
-                          <label
-                            class=" {% if option.name == 'Subscription' %}subscription-option{% endif %} {% if option.name == 'Bundle' %}bundle-option{% endif %}"
-                            for="{{ option.name | handle }}-{{ value | handle }}"
-                          >
-                            {{ value }}
-                          </label>
-                        </div>
-                      {% endfor %}
+                        {% else %}
+                          {{ value }}
+                        {% endif %}
+                      </label>
                     </div>
-                  </fieldset>
-                {% endfor %}
-              </div>
-            {% endif %}
-            <div class="main-product-prices">
-              <p class="main-product-compare {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hide{% endunless %}">
-                {{ product.selected_or_first_available_variant.compare_at_price | money }}
-              </p>
-
-              <p class="main-product-price">
-                {{ product.selected_or_first_available_variant.price | money }}
-              </p>
-            </div>
-            <button
-              {% unless product.selected_or_first_available_variant.available %}
-                disabled
-              {% endunless %}
-              class="button full main-product-add-to-cart"
-              type="submit"
-              class="main-product-add"
-            >
-              {% if product.selected_or_first_available_variant.available %}
-                <p>{{ section.settings.button_text }}</p>
-              {% else %}
-                Out of Stock
-              {% endif %}
-            </button>
-          {% endform %}
-        {%- endif -%}
+                  {% endfor %}
+                </div>
+              </fieldset>
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
