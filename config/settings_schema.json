@@ -4,8 +4,8 @@
     "theme_name": "Dawn",
     "theme_version": "11.0.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
     "name": "t:settings_schema.logo.name",
@@ -113,7 +113,13 @@
         "type": "header",
         "content": "t:settings_schema.typography.settings.header__1.content"
       },
-   
+      {
+        "type": "font_picker",
+        "id": "type_header_font",
+        "default": "assistant_n4",
+        "label": "t:settings_schema.typography.settings.type_header_font.label",
+        "info": "t:settings_schema.typography.settings.type_header_font.info"
+      },
       {
         "type": "range",
         "id": "heading_scale",
@@ -128,7 +134,13 @@
         "type": "header",
         "content": "t:settings_schema.typography.settings.header__2.content"
       },
-   
+      {
+        "type": "font_picker",
+        "id": "type_body_font",
+        "default": "assistant_n4",
+        "label": "t:settings_schema.typography.settings.type_body_font.label",
+        "info": "t:settings_schema.typography.settings.type_body_font.info"
+      },
       {
         "type": "range",
         "id": "body_scale",
