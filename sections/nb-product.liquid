@@ -33,6 +33,14 @@
       font-weight: 700;
       line-height: 110%;
     }
+    .subscription-option{
+    width: 61px;
+    height: 61px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    }
     /* Add this CSS to your theme's stylesheet */
     /* Hide radio buttons */
     input[type='radio'] {
@@ -66,13 +74,14 @@
     padding: 0 12px;
     line-height: 36px;
     background: white;
-    border: 1px solid black;
+    border: 1px solid #51525C;
     transition: 0.2s border-color;
   }
 
   .main-product-option-radio input:checked + label,
   .main-product-option-radio label:hover {
-    border-color: red;
+    color:white;
+    background-color:#51525C ;
   }
 
   .main-product-option .main-product-select,
@@ -152,9 +161,6 @@
               {{ product.description }}
             </p>
           {%- endif -%}
-          {%- if product.price != blank -%}
-            <span class="product__price">Price: {{ product.price | money }}</span>
-          {%- endif -%}
 
           {% form 'product', product %}
             <input
@@ -166,7 +172,7 @@
             {% if product.variants.size > 1 %}
               <div class="main-product-options">
                 {% for option in product.options_with_values %}
-                  <fieldset class="main-product-option {% if option.name == 'Subscribe' %}subscription-option{% endif %} {% if option.name == 'Bundle' %}bundle-option{% endif %}">
+                  <fieldset class="main-product-option">
                     <legend>{{ option.name }}</legend>
                     <div class="main-product-option-radios">
                       {% for value in option.values %}
@@ -178,10 +184,13 @@
                             type="radio"
                             name="{{ option.name }}"
                             value="{{ value }}"
-                            class="hide"
+                            class="hide "
                             id="{{ option.name | handle }}-{{ value | handle }}"
                           >
-                          <label for="{{ option.name | handle }}-{{ value | handle }}">
+                          <label
+                            class=" {% if option.name == 'Subscription' %}subscription-option{% endif %} {% if option.name == 'Bundle' %}bundle-option{% endif %}"
+                            for="{{ option.name | handle }}-{{ value | handle }}"
+                          >
                             {{ value }}
                           </label>
                         </div>
@@ -191,7 +200,15 @@
                 {% endfor %}
               </div>
             {% endif %}
+            <div class="main-product-prices">
+              <p class="main-product-compare {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hide{% endunless %}">
+                {{ product.selected_or_first_available_variant.compare_at_price | money }}
+              </p>
 
+              <p class="main-product-price">
+                {{ product.selected_or_first_available_variant.price | money }}
+              </p>
+            </div>
             <button
               {% unless product.selected_or_first_available_variant.available %}
                 disabled
