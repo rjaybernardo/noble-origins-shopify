@@ -134,8 +134,9 @@
         background-image: url('{{ 'footer.jpg' | asset_url }}');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: top right;
         position: relative;
-        height: auto;
+        height: 563px;
       }
 
       .footer__container::before {
@@ -148,6 +149,8 @@
         background-image: url('{{ 'footer-shape.png' | asset_url }}');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: top right;
+
         opacity: 1;
         z-index: 0;
       }
@@ -196,10 +199,6 @@
               height="200"
               loading="lazy"
             >
-          {% else %}
-            <div>
-              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-            </div>
           {% endif %}
         </div>
       </div>
