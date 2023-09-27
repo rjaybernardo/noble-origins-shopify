@@ -112,11 +112,11 @@
 -%}
 
 <div
-  class="beyond-section isolate{% unless section.settings.full_width %} page-width{% endunless %}"
+  class="beyond-section isolate{% unless section.settings.full_width %} page-width{% endunless %}  color-{{ section.settings.color_scheme }}"
 >
   <div
     class="
-          multicolumn color-{{ section.settings.color_scheme }}
+          multicolumn
           gradient
           {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %}
           background-{{ section.settings.background_style }}{% endunless %}
@@ -338,6 +338,12 @@
       "label": "t:sections.rich-text.blocks.text.settings.text.label"
     },
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
       "type": "text",
       "id": "caption",
       "default": "Add a tagline",
@@ -522,12 +528,7 @@
       "id": "button_link",
       "label": "t:sections.multicolumn.settings.button_link.label"
     },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "background-1"
-    },
+
     {
       "type": "header",
       "content": "t:sections.multicolumn.settings.header_mobile.content"

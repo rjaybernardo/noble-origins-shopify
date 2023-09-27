@@ -255,6 +255,7 @@
         "heading": "Beyond Traditional Whey: Unmasking Common Pitfalls",
         "heading_size": "h1",
         "text": "<p>Many have treaded the path of generic whey supplements, only to face hurdles like bloating, artificial additives, and lackluster results. Discover how Noble Origins rises above these common pitfalls, offering a solution that's both effective and pure.<\/p>",
+        "color_scheme": "background-2",
         "caption": "",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
@@ -268,7 +269,6 @@
         "background_style": "primary",
         "button_label": "Button label",
         "button_link": "",
-        "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -355,7 +355,7 @@
         "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "It Works When Others Don't!",
+            "heading": "",
             "heading_size": "h1"
           }
         },
