@@ -6,15 +6,12 @@
       "type": "footer",
       "settings": {
         "color_scheme": "background-1",
-        "newsletter_enable": false,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": false,
-        "show_social": false,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
-        "payment_enable": false,
-        "show_policy": false,
-        "margin_top": 0,
+        "header": "Ready for a Change?",
+        "subheader": "Say goodbye to bloat. Say hello to pure protein joy.",
+        "button_label": "Try Noble Now!",
+        "button_link": "shopify:\/\/products\/noble-origins",
+        "button_style_secondary": false,
+        "image": "shopify:\/\/shop_images\/productbannerimage_e767fde2-44cb-4550-a1cc-0d0b3bb91845.png",
         "padding_top": 4,
         "padding_bottom": 4
       }

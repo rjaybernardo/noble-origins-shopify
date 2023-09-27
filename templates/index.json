@@ -21,7 +21,7 @@
           "type": "button",
           "settings": {
             "button_label": "Try Noble Now!",
-            "button_link": "",
+            "button_link": "shopify:\/\/products\/noble-origins",
             "button_style_secondary": false
           }
         },
@@ -374,6 +374,8 @@
         "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-button-1"
       ],
       "settings": {
+        "selected_product": "noble-origins",
+        "button_text": "Order Now & SAVE!",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
