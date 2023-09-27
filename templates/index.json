@@ -345,6 +345,13 @@
     "f9e001d7-96d0-4bbc-915a-d6372ee9bec6": {
       "type": "nb-product",
       "blocks": {
+        "470cc8fd-d654-48ff-9195-baaecc4c69d8": {
+          "type": "ratings",
+          "settings": {
+            "ratings": 5,
+            "paragraph_text": "4.9\/5 Rated by 10,000+ Happy Customers"
+          }
+        },
         "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-heading-1": {
           "type": "heading",
           "settings": {
@@ -369,6 +376,7 @@
         }
       },
       "block_order": [
+        "470cc8fd-d654-48ff-9195-baaecc4c69d8",
         "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-heading-1",
         "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-text-1",
         "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-button-1"
@@ -395,7 +403,7 @@
         "template--21039849799998__48700bc5-8f65-44c4-a522-c54138094035-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "See Noble Origins in Action: All Good Stuff, No Tricks!",
+            "heading": "",
             "heading_size": "h1"
           }
         },
@@ -413,7 +421,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "background-2",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
