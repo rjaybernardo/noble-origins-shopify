@@ -31,18 +31,28 @@
         font-weight: 700;
         line-height: 110%;
         text-transform: capitalize;
+        margin: 10px 0 15px;
+      }
+      .product__header span{
+      color:#C20004;
       }
       .product__text {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%; /* 24px */
+      color: #000;
+      font-family: League Spartan;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
       }
       .product__button {
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
         line-height: 110%;
+        width: 100% ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .subscription-option{
       width: 61px;
@@ -194,12 +204,29 @@
                 </p>
               </div>
             {%- when 'heading' -%}
-              <h2
-                class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
-                {{ block.shopify_attributes }}
-              >
-                {{ block.settings.heading }}
-              </h2>
+              {%- if block.settings.heading == blank -%}
+                <h2
+                  class="product__header rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  <span>It Works</span> When Others Don't!
+                </h2>
+              {%- else -%}
+                <h2
+                  class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {{ block.settings.heading }}
+                </h2>
+              {%- endif -%}
 
             {%- when 'text' -%}
               <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -249,7 +276,7 @@
                 </fieldset>
               {% endfor %}
             </div>
-            <input class="button" type="submit" value="{{section.settings.button_text}}">
+            <input class="product__button button" type="submit" value="{{section.settings.button_text}}">
           {% endform %}
         {% endif %}
       </div>
