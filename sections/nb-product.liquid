@@ -14,117 +14,128 @@
   }
 {%- endstyle -%}
 <style>
-    .product__header {
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 110%;
-      text-transform: capitalize;
+  .product__image-with-text {
+  display: flex;
+  align-items: center;
+  border: none;
     }
-    .product__text {
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%; /* 24px */
-    }
-    .product__button {
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 110%;
-    }
-    .subscription-option{
-    width: 61px;
-    height: 61px;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
-    }
-    .bundle-option{
-    border: 0 !important;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 5px;
-    }
-    .bundle-option img{
-    display: block;
-    margin: 5px 0;
-    }
-
-    /* Add this CSS to your theme's stylesheet */
-    /* Hide radio buttons */
-    input[type='radio'] {
-      display: none;
-    }
-
-    /* Style the labels as desired */
-    label {
-      /* Add your label styles here */
-    }
-
-    /* Optional: Apply custom styles to labels based on their attributes */
-    label[for*='subscription'] {
-      /* Styles for subscription labels */
-    }
-
-    label[for*='bundle'] {
-      /* Styles for bundle labels */
-    }
-    /* Add this CSS to your theme's stylesheet */
-    fieldset {
-      border: none; /* Remove the border from fieldset elements */
-    }
-    .main-product-option-radios {
-    display: flex;
-    gap: 10px;
-    align-items: flex-end;
-  }
-
-
-  .main-product-option-radio label {
-    display: inline-block;
-    padding: 0 12px;
-    line-height: 36px;
-    background: white;
-    border: 1px solid #51525C;
-    transition: 0.2s border-color;
-  }
-
-  .main-product-option-radio input:checked + label,
-  .main-product-option-radio label:hover {
-    color:white;
-    background-color:#51525C ;
-  }
-
-  .main-product-option .main-product-select,
-  .main-product-quantity {
-    display: block;
+    .product__image-with-text img{
     width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    height: 54px;
-    padding: 0 24px;
-    font-size: 16px;
-  }
+    height: auto;
+    max-width: 100%;
+    display: block;
+    }
+      .product__header {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: capitalize;
+      }
+      .product__text {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+      }
+      .product__button {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+      }
+      .subscription-option{
+      width: 61px;
+      height: 61px;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      padding: 0 !important;
+      }
+      .bundle-option{
+      border: 0 !important;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 5px;
+      }
+      .bundle-option img{
+      display: block;
+      margin: 5px 0;
+      }
 
-  .main-product-select {
-    background-image: url("{{ 'down.svg' | asset_url }}");
-    background-repeat: no-repeat;
-    background-position: right 16px center;
-    background-size: 10px;
-  }
+      /* Add this CSS to your theme's stylesheet */
+      /* Hide radio buttons */
+      input[type='radio'] {
+        display: none;
+      }
 
-  .main-product-option {
-    margin-bottom: 5px;
-  }
+      /* Style the labels as desired */
+      label {
+        /* Add your label styles here */
+      }
 
-  .main-product-option label {
-    font-weight: 500;
-    font-size: 14px;
-    display: inline-block;
-    margin-bottom: 5px;
-  }
+      /* Optional: Apply custom styles to labels based on their attributes */
+      label[for*='subscription'] {
+        /* Styles for subscription labels */
+      }
+
+      label[for*='bundle'] {
+        /* Styles for bundle labels */
+      }
+      /* Add this CSS to your theme's stylesheet */
+      fieldset {
+        border: none; /* Remove the border from fieldset elements */
+      }
+      .main-product-option-radios {
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+    }
+
+
+    .main-product-option-radio label {
+      display: inline-block;
+      padding: 0 12px;
+      line-height: 36px;
+      background: white;
+      border: 1px solid #51525C;
+      transition: 0.2s border-color;
+    }
+
+    .main-product-option-radio input:checked + label,
+    .main-product-option-radio label:hover {
+      color:white;
+      background-color:#51525C ;
+    }
+
+    .main-product-option .main-product-select,
+    .main-product-quantity {
+      display: block;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      height: 54px;
+      padding: 0 24px;
+      font-size: 16px;
+    }
+
+    .main-product-select {
+      background-image: url("{{ 'down.svg' | asset_url }}");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 10px;
+    }
+
+    .main-product-option {
+      margin-bottom: 5px;
+    }
+
+    .main-product-option label {
+      font-weight: 500;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
 </style>
 {% assign scheme1 = settings.color_schemes | first %}
 {%- assign product = section.settings.selected_product -%}
@@ -133,7 +144,7 @@
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
-        class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
+        class="product__image-with-text image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
         {% if section.settings.height == 'adapt' and section.settings.image != blank %}
           style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
         {% endif %}
@@ -198,45 +209,48 @@
         {%- endfor -%}
 
         {% if product.variants.size > 1 %}
-          <div class="main-product-options">
-            {% for option in product.options_with_values %}
-              <fieldset class="main-product-option">
-                <legend>{{ option.name }}</legend>
-                <div class="main-product-option-radios">
-                  {% for value in option.values %}
-                    <div class="main-product-option-radio">
-                      <input
-                        {% if option.selected_value == value %}
-                          checked
-                        {% endif %}
-                        type="radio"
-                        name="{{ option.name }}"
-                        value="{{ value }}"
-                        class="hide"
-                        id="{{ option.name | handle }}-{{ value | handle }}"
-                      >
-                      <label
-                        class="{% if option.name == 'Subscription' %}subscription-option{% endif %}{% if option.name == 'Bundle' %}bundle-option{% endif %}"
-                        for="{{ option.name | handle }}-{{ value | handle }}"
-                      >
-                        {% if option.name == 'Bundle' %}
-                          <img
-                            src="{{ 'p' | append: value | append: '.png' | asset_url }}"
-                            width="auto"
-                            height="auto"
-                            loading="lazy"
-                            alt="{{ value }}"
-                          >
-                        {% else %}
-                          {{ value }}
-                        {% endif %}
-                      </label>
-                    </div>
-                  {% endfor %}
-                </div>
-              </fieldset>
-            {% endfor %}
-          </div>
+          {% form 'product', product %}
+            <div class="main-product-options">
+              {% for option in product.options_with_values %}
+                <fieldset class="main-product-option">
+                  <legend>{{ option.name }}</legend>
+                  <div class="main-product-option-radios">
+                    {% for value in option.values %}
+                      <div class="main-product-option-radio">
+                        <input
+                          {% if option.selected_value == value %}
+                            checked
+                          {% endif %}
+                          type="radio"
+                          name="{{ option.name }}"
+                          value="{{ value }}"
+                          class="hide"
+                          id="{{ option.name | handle }}-{{ value | handle }}"
+                        >
+                        <label
+                          class="{% if option.name == 'Subscription' %}subscription-option{% endif %}{% if option.name == 'Bundle' %}bundle-option{% endif %}"
+                          for="{{ option.name | handle }}-{{ value | handle }}"
+                        >
+                          {% if option.name == 'Bundle' %}
+                            <img
+                              src="{{ 'p' | append: value | append: '.png' | asset_url }}"
+                              width="auto"
+                              height="auto"
+                              loading="lazy"
+                              alt="{{ value }}"
+                            >
+                          {% else %}
+                            {{ value }}
+                          {% endif %}
+                        </label>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </fieldset>
+              {% endfor %}
+            </div>
+            <input class="button" type="submit" value="{{section.settings.button_text}}">
+          {% endform %}
         {% endif %}
       </div>
     </div>
@@ -347,6 +361,7 @@
       "label": "Select Product",
       "id": "selected_product"
     },
+
     {
       "type": "text",
       "id": "button_text",
