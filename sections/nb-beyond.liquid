@@ -27,6 +27,9 @@
     line-height: 110%;
     text-transform: capitalize;
   }
+  .beyond__header span {
+    color: #c20004;
+  }
   .beyond__description {
     color: #3f3f46;
     font-size: 20px;
@@ -148,16 +151,29 @@
         >
           {{ section.settings.caption | escape }}
         </p>
-        <h2
-          class="beyond__header rich-text__heading rte inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {{ section.shopify_attributes }}
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-          {% endif %}
-        >
-          {{ section.settings.heading }}
-        </h2>
+        {%- if section.settings.heading == blank -%}
+          <h2
+            class="beyond__header rich-text__heading rte inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ section.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            Beyond Traditional Whey: <span>Unmasking Common Pitfalls</span>
+          </h2>
+        {%- else -%}
+          <h2
+            class="beyond__header rich-text__heading rte inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ section.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {{ section.settings.heading }}
+          </h2>
+        {%- endif -%}
         <div
           class="beyond__description rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}

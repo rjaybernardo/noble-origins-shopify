@@ -34,9 +34,10 @@
   .banner__button {
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 110%;
     padding: 25px 40px;
+    width: 100%;
   }
 
   .ratings__block {
@@ -53,6 +54,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+  }
+  @media (min-width: 750px) {
+    .banner__button {
+      width: auto;
+    }
   }
 </style>
 {% assign scheme1 = settings.color_schemes | first %}
