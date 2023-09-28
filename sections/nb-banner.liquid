@@ -17,38 +17,45 @@
   .banner__container {
     display: grid;
     grid-template-columns: 1fr;
-    min-height: 490px;
+    grid-template-rows: 1fr auto;
+    height: 500px;
+    background: linear-gradient(to bottom, transparent 50%, white 50%),
+      url('{{ 'banner.jpg' | asset_url }}') top right/100% no-repeat;
   }
   .banner__text--container {
     order: 2;
   }
   .banner__image--container {
     order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
   .banner__header {
-    color: var(--neutral-120, #101012);
+    color: #101012;
     font-family: 'Bebas Neue';
-    font-size: 124px;
+    font-size: clamp(48px, 10vw, 124px);
     font-style: normal;
     letter-spacing: -0.62px;
     text-transform: capitalize;
-    line-height: 110px;
     margin: 0;
+    text-align: center;
   }
   .banner__text {
     color: #101012;
     font-family: 'League Spartan';
-    font-size: 32px;
+    font-size: clamp(14px, 2.8vw, 32px);
     font-style: normal;
     font-weight: 500;
     line-height: 110%;
+    text-align: center;
   }
   .banner__button {
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: 110%;
-    padding: 25px 40px;
+    padding: 20px 25px;
     margin: 20px 0;
     width: 100%;
   }
@@ -56,14 +63,33 @@
   .ratings__block {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0;
     gap: 5px;
   }
-  .ratings__block .star {
-    color: #ffb400;
-  }
   .ratings__text {
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .star-rating .star {
+    color: #ffb400;
+    font-size: 25px;
+    height: auto;
+  }
+  .banner__star-rating {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .ratings__text {
+    color: var(--neutral-120, #101012);
+
+    /* League Spartan Body 4/Regular */
+    font-family: League Spartan;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -76,6 +102,8 @@
       min-height: 850px;
       display: grid;
       grid-template-columns: minmax(0, 480px) 1fr;
+      background: linear-gradient(to left, transparent 50%, white 50%),
+      url('{{ 'banner.jpg' | asset_url }}') bottom right/100% no-repeat;
     }
 
     .banner__text--container {
@@ -83,11 +111,22 @@
       align-items: center;
       order: 1;
     }
+    .banner__header {
+      line-height: 110px;
+      text-align: left;
+    }
+    .banner__text {
+      text-align: left;
+    }
+    .ratings__block {
+      justify-content: flex-start;
+    }
     .banner__image--container {
       order: 2;
       display: flex;
       align-items: flex-end;
-      margin-bottom: 5%;
+      justify-content: flex-start;
+      margin-bottom: 3%;
     }
     .footer__image--wrapper {
       position: relative;
@@ -103,6 +142,7 @@
     .banner__button {
       width: auto;
       margin: 40px 0;
+      padding: 25px 40px;
     }
   }
 </style>
@@ -156,7 +196,7 @@
               {%- when 'ratings' -%}
                 <div class="ratings__block">
                   {% assign rating = block.settings.ratings | round %}
-                  <div class="star-rating">
+                  <div class="banner__star-rating">
                     {% for i in (1..rating) %}
                       <span class="star rated">&#9733;</span>
                     {% endfor %}
