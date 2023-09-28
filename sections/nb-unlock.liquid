@@ -19,18 +19,19 @@
   .unlock__caption {
     color: #c20004;
     font-family: Bebas Neue;
-    font-size: 24px;
+    font-size: clamp(18px, 2.6vw, 24px);
     font-style: normal;
     font-weight: 500;
     line-height: 110%;
   }
   .unlock__header {
     color: #18181b;
-    font-size: 48px;
+    font-size: clamp(32px, 5vw, 48px);
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
     text-transform: capitalize;
+    margin: 0 0 20px;
   }
   .unlock__description {
     font-size: 20px;
@@ -38,11 +39,11 @@
     font-weight: 400;
     line-height: 110%;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 50px;
   }
   .unlock__card--container {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 100px 1fr;
   }
   .multicolumn__card--image {
     overflow: hidden;
@@ -55,17 +56,40 @@
   }
   .unlock__card--header {
     color: #0a0a0a;
-    font-size: 24px;
+    font-size: clamp(20px, 2.75vw, 24px);
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
   }
   .unlock__card--text {
     color: #505050;
-    font-size: 20px;
+    font-size: clamp(16px, 2.25vw, 20px);
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+    max-width: 490px;
+  }
+
+  .unlock__image {
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  .unlock__image-responsive img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 750px) {
+    .unlock__card--container {
+      grid-template-columns: 180px 1fr;
+    }
+    .unlock__image {
+      width: 180px;
+      height: 180px;
+    }
   }
 </style>
 {%- liquid
@@ -125,7 +149,7 @@
           {{ section.settings.heading }}
         </h2>
         <div
-          class="unlock__description rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="small-hide medium-hide unlock__description rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
@@ -171,12 +195,14 @@
             {% endif %}
           >
             <div class="unlock__card--container multicolumn-card content-container">
-              <div class="multicolumn__card--image">
-                {%- if block.settings.image != blank -%}
-                  {{ block.settings.image | image_url: width: 180 | image_tag: loading: 'lazy' }}
-                {%- else -%}
-                  {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-                {%- endif -%}
+              <div class="unlock__image multicolumn__card--image">
+                <div class="unlock__image-responsive">
+                  {%- if block.settings.image != blank -%}
+                    {{ block.settings.image | image_url: width: 180 | image_tag: loading: 'lazy' }}
+                  {%- else -%}
+                    {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
               </div>
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
