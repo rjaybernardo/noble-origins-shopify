@@ -40,6 +40,7 @@
         "template--21039849799998__00f1ac00-317f-4c9e-8cf7-179ee90d0bed-ratings-1"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/productbannerimage.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -423,6 +424,7 @@
         "template--21039849799998__48700bc5-8f65-44c4-a522-c54138094035-text-1"
       ],
       "settings": {
+        "video": "shopify:\/\/files\/videos\/IMG_6451 (video-converter.com).mp4",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "background-2",
