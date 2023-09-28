@@ -49,15 +49,26 @@
         margin-bottom: -{{ 1 | divided_by: section.settings.video.preview_image.aspect_ratio | times: 100 }}%;
       }
       .product__video
-    {
-      position: relative;
-      min-height: 500px;
-      width: min(90%,500px);
-      margin: 50px auto 0;
+      {
+        position: relative;
+        min-height: 500px;
+        width: min(90%,500px);
+        margin: 50px auto 0;
+      }
+      .video__wrapper {
+          position: relative;
+          padding-top: 150%; /* 720px / 480px * 100% */
+      }
+      .video-responsive {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
       }
       @media(min-width){
       .video__text {
-      font-size: 18px;
+        font-size: 18px;
       }
 
       }
@@ -151,13 +162,18 @@
           {%- endcase -%}
         {%- endfor -%}
         <div class="product__video">
-          {% if section.settings.video != null %}
-            {{ section.settings.video | video_tag: autoplay: true, loop: false, muted: false, controls: true }}
-          {%- else -%}
-            <div class="video__placeholder">
-              {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-            </div>
-          {% endif %}
+          <div class="video__wrapper">
+            {% if section.settings.video != null %}
+              {{
+                section.settings.video
+                | video_tag: autoplay: true, loop: false, muted: false, controls: true, class: 'video-responsive'
+              }}
+            {%- else -%}
+              <div class="video__placeholder">
+                {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
