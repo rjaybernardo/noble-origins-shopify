@@ -14,147 +14,173 @@
   }
 {%- endstyle -%}
 <style>
-  .product__image-with-text {
+  .product__ratings-block{
   display: flex;
   align-items: center;
-  border: none;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  }
+    .product__star-rating{
+    color:#ffb400;
+    display:flex;
+    flex-wrap: nowrap;
     }
-    .product__image-with-text img{
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    display: block;
-    }
-      .product__header {
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 110%;
-        text-transform: capitalize;
-        margin: 10px 0 15px;
-      }
-      .product__header span{
-      color:#C20004;
-      }
-      .product__text {
-      color: #000;
+    .product__ratings-paragraph{
+      color:  #101012;
       font-family: League Spartan;
-      font-size: 16px;
+      font-size: clamp(12px,1.6vw,14px);
       font-style: normal;
       font-weight: 400;
       line-height: 150%;
+    }
+    .product__image-with-text {
+    display: flex;
+    align-items: center;
+    border: none;
+      }
+      .product__image-with-text img{
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      display: block;
+      }
+        .product__header {
+          font-size: clamp(40px,5.5vw,48px);
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%;
+          text-transform: capitalize;
+          margin: 10px auto 15px;
+        }
+        .product__header span{
+        color:#C20004;
+        }
+        .product__text {
+        color: #000;
+        font-family: League Spartan;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        }
+        .product__button {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%;
+          width: 100% ;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding:25px 40px;
+        }
+        .subscription-option{
+        width: 61px;
+        height: 61px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        }
+        .bundle-option{
+        border: 0 !important;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 5px;
+        }
+        .bundle-option img{
+        display: block;
+        margin: 5px 0;
+        }
+
+        /* Add this CSS to your theme's stylesheet */
+        /* Hide radio buttons */
+        input[type='radio'] {
+          display: none;
+        }
+
+        /* Style the labels as desired */
+        label {
+          /* Add your label styles here */
+        }
+
+        /* Optional: Apply custom styles to labels based on their attributes */
+        label[for*='subscription'] {
+          /* Styles for subscription labels */
+        }
+
+        label[for*='bundle'] {
+          /* Styles for bundle labels */
+        }
+        /* Add this CSS to your theme's stylesheet */
+        fieldset {
+          border: none; /* Remove the border from fieldset elements */
+        }
+        .main-product-option-radios {
+        display: flex;
+        gap: 10px;
+        align-items: flex-end;
+      }
+
+
+      .main-product-option-radio label {
+        display: inline-block;
+        padding: 0 12px;
+        line-height: 36px;
+        background: white;
+        border: 1px solid #51525C;
+        transition: 0.2s border-color;
+      }
+
+      .main-product-option-radio input:checked + label,
+      .main-product-option-radio label:hover {
+        color:white;
+        background-color:#51525C ;
+      }
+
+      .main-product-option .main-product-select,
+      .main-product-quantity {
+        display: block;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        height: 54px;
+        /* padding: 0 24px; */
+        font-size: 16px;
+      }
+
+      .main-product-select {
+        background-image: url("{{ 'down.svg' | asset_url }}");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        background-size: 10px;
+      }
+
+      .main-product-option {
+        margin-bottom: 5px;
+      }
+
+      .main-product-option label {
+        font-weight: 500;
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+      @media(min-width:750px){
+      .product__ratings-block{
+      width: auto;
+      }
+      .product__header {
+       margin: 10px 0 15px;
+    }
+      .product__section{
+      position:relative;
       }
       .product__button {
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 110%;
-        width: 100% ;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding:25px 40px;
-      }
-      .subscription-option{
-      width: 61px;
-      height: 61px;
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      padding: 0 !important;
-      }
-      .bundle-option{
-      border: 0 !important;
-      justify-content: center;
-      align-items: flex-end;
-      padding: 5px;
-      }
-      .bundle-option img{
-      display: block;
-      margin: 5px 0;
-      }
-
-      /* Add this CSS to your theme's stylesheet */
-      /* Hide radio buttons */
-      input[type='radio'] {
-        display: none;
-      }
-
-      /* Style the labels as desired */
-      label {
-        /* Add your label styles here */
-      }
-
-      /* Optional: Apply custom styles to labels based on their attributes */
-      label[for*='subscription'] {
-        /* Styles for subscription labels */
-      }
-
-      label[for*='bundle'] {
-        /* Styles for bundle labels */
-      }
-      /* Add this CSS to your theme's stylesheet */
-      fieldset {
-        border: none; /* Remove the border from fieldset elements */
-      }
-      .main-product-option-radios {
-      display: flex;
-      gap: 10px;
-      align-items: flex-end;
+      width: auto ;
     }
-
-
-    .main-product-option-radio label {
-      display: inline-block;
-      padding: 0 12px;
-      line-height: 36px;
-      background: white;
-      border: 1px solid #51525C;
-      transition: 0.2s border-color;
-    }
-
-    .main-product-option-radio input:checked + label,
-    .main-product-option-radio label:hover {
-      color:white;
-      background-color:#51525C ;
-    }
-
-    .main-product-option .main-product-select,
-    .main-product-quantity {
-      display: block;
-      width: 100%;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      height: 54px;
-      padding: 0 24px;
-      font-size: 16px;
-    }
-
-    .main-product-select {
-      background-image: url("{{ 'down.svg' | asset_url }}");
-      background-repeat: no-repeat;
-      background-position: right 16px center;
-      background-size: 10px;
-    }
-
-    .main-product-option {
-      margin-bottom: 5px;
-    }
-
-    .main-product-option label {
-      font-weight: 500;
-      font-size: 14px;
-      display: inline-block;
-      margin-bottom: 5px;
-    }
-    @media(min-width:750px){
-    .product__section{
-    position:relative;
-    }
-    .product__button {
-    width: auto ;
-  }
-    }
+      }
 </style>
 {% assign scheme1 = settings.color_schemes | first %}
 {%- assign product = section.settings.selected_product -%}
@@ -201,14 +227,14 @@
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'ratings' -%}
-              <div class="ratings-block mobile">
+              <div class="product__ratings-block mobile">
                 {% assign rating = block.settings.ratings | round %}
-                <div class="star-rating">
+                <div class="product__star-rating">
                   {% for i in (1..rating) %}
                     <span class="star rated">&#9733;</span>
                   {% endfor %}
                 </div>
-                <p class="ratings-paragraph">
+                <p class="product__ratings-paragraph">
                   {{ block.settings.paragraph_text | escape }}
                 </p>
               </div>
