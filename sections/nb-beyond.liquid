@@ -82,6 +82,27 @@
     flex-grow: 1;
     flex-shrink: 0;
   }
+  .slider-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjust the gap between dots as needed */
+  }
+
+  .slider-dot {
+    width: 10px; /* Adjust the size of the dots as needed */
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray; /* Adjust the color of inactive dots */
+    cursor: pointer;
+  }
+
+  .slider-dot.active {
+    width: 20px; /* Adjust the width of the active dot to make it oblong */
+    height: 10px; /* Adjust the height of the active dot to make it oblong */
+    border-radius: 50%;
+    background-color: #181818;
+  }
+
   @media (min-width: 950px) {
     .beyond__grid {
       display: grid;
@@ -321,7 +342,12 @@
           >
             {% render 'icon-caret' %}
           </button>
-
+          <div class="slider-counter caption">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          </div>
           <button
             type="button"
             class="slider-button slider-button--next"
