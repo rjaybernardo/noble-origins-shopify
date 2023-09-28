@@ -16,32 +16,36 @@
   }
 {%- endstyle -%}
 <style>
+  .beyond__page-width {
+    width: min(90%, var(--page-width));
+    margin: 0 auto;
+  }
   .beyond-section {
   }
   .beyond__header {
     color: #101012;
-    font-size: 48px;
+    font-size: clamp(32px, 5vw, 48px);
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
     text-transform: capitalize;
+    margin-bottom: 20px;
   }
   .beyond__header span {
     color: #c20004;
   }
   .beyond__description {
     color: #3f3f46;
-    font-size: 20px;
+    font-size: clamp(16px, 2.25vw, 20px);
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+    margin-bottom: 30px;
   }
   .beyond__content--container {
     position: relative;
   }
   .beyond__card {
-    position: absolute;
-    background: #18181b;
     color: white;
     opacity: 0.9;
     bottom: 0;
@@ -49,26 +53,15 @@
     width: 100%;
   }
 
-  .beyond__card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: blur(5px);
-    z-index: -1;
-  }
   .beyond__card--header {
-    color: #fff;
+    color: #18181b;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
   }
   .beyond__card--text {
-    color: #d1d1d6;
+    color: #18181b;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -103,6 +96,34 @@
       grid-column: span 2;
       grid-row: span 2;
     }
+    .beyond__card {
+      position: absolute;
+      background: #18181b;
+      color: white;
+      opacity: 0; /* Initially set opacity to 0 to hide */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transition: opacity 0.3s; /* Add a transition for smooth opacity change */
+    }
+
+    .multicolumn-card__image-wrapper:hover + .beyond__card {
+      opacity: 0.9; /* On hover, change opacity to 0.9 to show */
+    }
+    .beyond__card--header {
+      color: #fff;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+    }
+    .beyond__card--text {
+      color: #d1d1d6;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
   }
 </style>
 {%- liquid
@@ -118,7 +139,7 @@
 >
   <div
     class="
-        {% unless section.settings.full_width %} page-width{% endunless %}
+      beyond__page-width
           multicolumn
           gradient
           {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %}
@@ -133,8 +154,10 @@
   >
     <div
       class="
+              beyond__page-width
+
                rich-text__wrapper
-               rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}
+               rich-text__wrapper--{{ section.settings.desktop_content_position }}
         isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
       "
       {% if settings.animations_reveal_on_scroll %}
