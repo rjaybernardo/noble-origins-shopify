@@ -49,19 +49,6 @@
                   loading="lazy"
                 >
               {% endif %}
-
-              <ul class="main-product-image-thumbs">
-                {% for image in product.images %}
-                  <li class="{% if image == featured %}selected{% endif %}">
-                    <img
-                      src="{{ image | image_url }}"
-                      width="300"
-                      height="200"
-                      loading="lazy"
-                    >
-                  </li>
-                {% endfor %}
-              </ul>
             </div>
 
             <div class="main-product-right">
@@ -143,11 +130,6 @@
 
 <script>
   
-  
-  
-  
-  
-  
   let productData; // Declare productData in a scope accessible to both parts
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -218,10 +200,44 @@
       } else {
         root.querySelector('.main-product-compare').classList.add('hide');
       }
+
+      // Change image
+      if (matchedVariant.image_id) {
+        // Find the image object in productData.product.images that matches the image_id
+        const matchedImage = productData.product.images.find(image => image.id === matchedVariant.image_id);
+
+        if (matchedImage) {
+          // Update the src attribute of the main product image
+          root.querySelector('.main-product-image').setAttribute('src', matchedImage.src);
+
+          // Remove the 'selected' class from all thumbnail items
+          root.querySelectorAll('.main-product-image-thumbs li.selected').forEach(thumb => {
+            thumb.classList.remove('selected');
+          });
+
+          // Find and add the 'selected' class to the thumbnail that corresponds to the selected image
+          const thumbnailIndex = productData.product.images.findIndex(image => image.id === matchedImage.id);
+          if (thumbnailIndex !== -1) {
+            const selectedThumbnail = root.querySelectorAll('.product-image-thumbs li')[thumbnailIndex];
+            if (selectedThumbnail) {
+              selectedThumbnail.classList.add('selected');
+            }
+          }
+        } else {
+          console.error('No matching image found for variant image_id:', matchedVariant.image_id);
+        }
+      }
     });
   });
-  
 
+  // Image change
+  root.querySelectorAll('.main-product-image-thumbs li').forEach(li => {
+    li.addEventListener('click', () => {
+      root.querySelector('.main-product-image-thumbs li.selected').classList.remove('selected');
+      li.classList.add('selected');
+      root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
+    });
+  });
 
 
 

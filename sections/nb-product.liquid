@@ -1,4 +1,5 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'variant.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -14,401 +15,406 @@
   }
 {%- endstyle -%}
 <style>
-  .product__ratings-block{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
+    .hide {
+    display: none;
   }
-    .product__star-rating{
-    color:#ffb400;
-    display:flex;
-    flex-wrap: nowrap;
-    }
-    .product__ratings-paragraph{
-      color:  #101012;
-      font-family: League Spartan;
-      font-size: clamp(12px,1.6vw,14px);
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-    }
-    .product__image-with-text {
+    .product__ratings-block{
     display: flex;
     align-items: center;
-    border: none;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    }
+      .product__star-rating{
+      color:#ffb400;
+      display:flex;
+      flex-wrap: nowrap;
       }
-      .product__image-with-text img{
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      display: block;
-      }
-        .product__header {
-          font-size: clamp(40px,5.5vw,48px);
-          font-style: normal;
-          font-weight: 700;
-          line-height: 110%;
-          text-transform: capitalize;
-          margin: 10px auto 15px;
-        }
-        .product__header span{
-        color:#C20004;
-        }
-        .product__text {
-        color: #000;
+      .product__ratings-paragraph{
+        color:  #101012;
         font-family: League Spartan;
-        font-size: 16px;
+        font-size: clamp(12px,1.6vw,14px);
         font-style: normal;
         font-weight: 400;
         line-height: 150%;
+      }
+      .product__image-with-text {
+      display: flex;
+      align-items: center;
+      border: none;
+        }
+        .product__image-with-text img{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        display: block;
+        }
+          .product__header {
+            font-size: clamp(40px,5.5vw,48px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%;
+            text-transform: capitalize;
+            margin: 10px auto 15px;
+          }
+          .product__header span{
+          color:#C20004;
+          }
+          .product__text {
+          color: #000;
+          font-family: League Spartan;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+          }
+          .product__button {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%;
+            width: 100% ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:25px 40px;
+          }
+          .subscription-option{
+          width: 61px;
+          height: 61px;
+          display: flex !important;
+          align-items: center;
+          justify-content: center;
+          padding: 0 !important;
+          }
+          .bundle-option{
+          border: 0 !important;
+          justify-content: center;
+          align-items: flex-end;
+          padding: 5px;
+          }
+          .bundle-option img{
+          display: block;
+          margin: 5px 0;
+          }
+
+          /* Add this CSS to your theme's stylesheet */
+          /* Hide radio buttons */
+          input[type='radio'] {
+            display: none;
+          }
+
+          /* Style the labels as desired */
+          label {
+            /* Add your label styles here */
+          }
+
+          /* Optional: Apply custom styles to labels based on their attributes */
+          label[for*='subscription'] {
+            /* Styles for subscription labels */
+          }
+
+          label[for*='bundle'] {
+            /* Styles for bundle labels */
+          }
+          /* Add this CSS to your theme's stylesheet */
+          fieldset {
+            border: none; /* Remove the border from fieldset elements */
+          }
+          .main-product-option-radios {
+          display: flex;
+          gap: 10px;
+          align-items: flex-end;
+        }
+
+
+        .main-product-option-radio label {
+          display: inline-block;
+          padding: 0 12px;
+          line-height: 36px;
+          background: white;
+          border: 1px solid #51525C;
+          transition: 0.2s border-color;
+        }
+
+        .main-product-option-radio input:checked + label,
+        .main-product-option-radio label:hover {
+          color:white;
+          background-color:#51525C ;
+        }
+
+        .main-product-option .main-product-select,
+        .main-product-quantity {
+          display: block;
+          width: 100%;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          height: 54px;
+          /* padding: 0 24px; */
+          font-size: 16px;
+        }
+
+        .main-product-select {
+          background-image: url("{{ 'down.svg' | asset_url }}");
+          background-repeat: no-repeat;
+          background-position: right 16px center;
+          background-size: 10px;
+        }
+
+        .main-product-option {
+          margin-bottom: 5px;
+        }
+
+        .main-product-option label {
+          font-weight: 500;
+          font-size: 14px;
+          display: inline-block;
+          margin-bottom: 5px;
+        }
+        @media(min-width:750px){
+        .product__ratings-block{
+        width: auto;
+        }
+        .product__header {
+         margin: 10px 0 15px;
+      }
+        .product__section{
+        position:relative;
         }
         .product__button {
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 110%;
-          width: 100% ;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding:25px 40px;
+        width: auto ;
+      }
         }
-        .subscription-option{
-        width: 61px;
-        height: 61px;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        padding: 0 !important;
-        }
-        .bundle-option{
-        border: 0 !important;
-        justify-content: center;
-        align-items: flex-end;
-        padding: 5px;
-        }
-        .bundle-option img{
-        display: block;
-        margin: 5px 0;
-        }
-
-        /* Add this CSS to your theme's stylesheet */
-        /* Hide radio buttons */
-        input[type='radio'] {
-          display: none;
-        }
-
-        /* Style the labels as desired */
-        label {
-          /* Add your label styles here */
-        }
-
-        /* Optional: Apply custom styles to labels based on their attributes */
-        label[for*='subscription'] {
-          /* Styles for subscription labels */
-        }
-
-        label[for*='bundle'] {
-          /* Styles for bundle labels */
-        }
-        /* Add this CSS to your theme's stylesheet */
-        fieldset {
-          border: none; /* Remove the border from fieldset elements */
-        }
-        .main-product-option-radios {
-        display: flex;
-        gap: 10px;
-        align-items: flex-end;
-      }
-
-
-      .main-product-option-radio label {
-        display: inline-block;
-        padding: 0 12px;
-        line-height: 36px;
-        background: white;
-        border: 1px solid #51525C;
-        transition: 0.2s border-color;
-      }
-
-      .main-product-option-radio input:checked + label,
-      .main-product-option-radio label:hover {
-        color:white;
-        background-color:#51525C ;
-      }
-
-      .main-product-option .main-product-select,
-      .main-product-quantity {
-        display: block;
-        width: 100%;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        height: 54px;
-        /* padding: 0 24px; */
-        font-size: 16px;
-      }
-
-      .main-product-select {
-        background-image: url("{{ 'down.svg' | asset_url }}");
-        background-repeat: no-repeat;
-        background-position: right 16px center;
-        background-size: 10px;
-      }
-
-      .main-product-option {
-        margin-bottom: 5px;
-      }
-
-      .main-product-option label {
-        font-weight: 500;
-        font-size: 14px;
-        display: inline-block;
-        margin-bottom: 5px;
-      }
-      @media(min-width:750px){
-      .product__ratings-block{
-      width: auto;
-      }
-      .product__header {
-       margin: 10px 0 15px;
-    }
-      .product__section{
-      position:relative;
-      }
-      .product__button {
-      width: auto ;
-    }
-      }
 </style>
 {% assign scheme1 = settings.color_schemes | first %}
 {%- assign product = section.settings.selected_product -%}
 
 <div class=" product__section image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-  <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-    <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-      <div
-        class="product__image-with-text image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
-        {% if section.settings.height == 'adapt' and section.settings.image != blank %}
-          style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
-        {% endif %}
-      >
-        {%- if product.featured_image.src != blank -%}
-          {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
-            {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
-            {%- capture sizes -%}
-              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
-              (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
-            {%- endcapture -%}
-          {%- else -%}
-            {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-            {%- capture sizes -%}
-              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
-              (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
-            {%- endcapture -%}
-          {%- endif -%}
-          {{
-            product.featured_image.src
-            | image_url: width: 1500
-            | image_tag: loading: 'lazy', sizes: sizes, widths: widths
-          }}
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
-      </div>
-    </div>
-    <div class="image-with-text__text-item grid__item">
-      <div
-        id="ImageWithText--{{ section.id }}"
-        class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
-      >
-        {% comment %} ratings, header and description here {% endcomment %}
-        {%- for block in section.blocks -%}
-          {% case block.type %}
-            {%- when 'ratings' -%}
-              <div class="product__ratings-block mobile">
-                {% assign rating = block.settings.ratings | round %}
-                <div class="product__star-rating">
-                  {% for i in (1..rating) %}
-                    <span class="star rated">&#9733;</span>
-                  {% endfor %}
-                </div>
-                <p class="product__ratings-paragraph">
-                  {{ block.settings.paragraph_text | escape }}
-                </p>
-              </div>
-            {%- when 'heading' -%}
-              {%- if block.settings.heading == blank -%}
-                <h2
-                  class="product__header rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                  {{ block.shopify_attributes }}
-                  {% if settings.animations_reveal_on_scroll %}
-                    data-cascade
-                    style="--animation-order: {{ forloop.index }};"
-                  {% endif %}
-                >
-                  <span>It Works</span> When Others Don't!
-                </h2>
-              {%- else -%}
-                <h2
-                  class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                  {{ block.shopify_attributes }}
-                  {% if settings.animations_reveal_on_scroll %}
-                    data-cascade
-                    style="--animation-order: {{ forloop.index }};"
-                  {% endif %}
-                >
-                  {{ block.settings.heading }}
-                </h2>
-              {%- endif -%}
+  <div
+    class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}"
+  >
+    <div id="main-product--{{ section.id }}" class="main-product">
+      <div class="width">
+        <div class="main-product-left">
+          {% if product.selected_or_first_available_variant.featured_image %}
+            {% assign featured = product.selected_or_first_available_variant.featured_image %}
+            <img
+              class="main-product-image"
+              id="product-image"
+              src="{{ featured | image_url }}"
+              width="300"
+              height="200"
+              loading="lazy"
+            >
+          {% else %}
+            {% assign featured = product.featured_image %}
+            <img
+              class="main-product-image"
+              id="product-image"
+              src="{{ featured | image_url }}"
+              width="300"
+              height="200"
+              loading="lazy"
+            >
+          {% endif %}
+        </div>
 
-            {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                {{ block.settings.text }}
-              </div>
-          {%- endcase -%}
-        {%- endfor -%}
+        <div class="main-product-right">
+          <h1>{{ product.title }}</h1>
 
-        {% if product.variants.size > 1 %}
+          <div class="main-product-prices">
+            <p class="main-product-compare {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hide{% endunless %}">
+              {{ product.selected_or_first_available_variant.compare_at_price | money }}
+            </p>
+
+            <p class="main-product-price">
+              {{ product.selected_or_first_available_variant.price | money }}
+            </p>
+          </div>
+
+          <div class="main-product-description">
+            {{ product.description }}
+          </div>
+
           {% form 'product', product %}
-            <div class="main-product-options">
-              {% for option in product.options_with_values %}
-                <fieldset class="main-product-option">
-                  <legend>{{ option.name }}</legend>
-                  <div class="main-product-option-radios">
-                    {% for value in option.values %}
-                      <div class="main-product-option-radio">
-                        <input
-                          {% if option.selected_value == value %}
-                            checked
-                          {% endif %}
-                          type="radio"
-                          name="{{ option.name }}"
-                          value="{{ value }}"
-                          class="hide"
-                          id="{{ option.name | handle }}-{{ value | handle }}"
-                        >
-                        <label
-                          class="{% if option.name == 'Subscription' %}subscription-option{% endif %}{% if option.name == 'Bundle' %}bundle-option{% endif %}"
-                          for="{{ option.name | handle }}-{{ value | handle }}"
-                        >
-                          {% if option.name == 'Bundle' %}
-                            <img
-                              src="{{ 'p' | append: value | append: '.png' | asset_url }}"
-                              width="auto"
-                              height="auto"
-                              loading="lazy"
-                              alt="{{ value }}"
-                            >
-                          {% else %}
+            <input
+              class="main-product-id hide"
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}"
+            >
+
+            {% if product.variants.size > 1 %}
+              <div class="main-product-options">
+                {% for option in product.options_with_values %}
+                  <fieldset class="main-product-option">
+                    <legend>{{ option.name }}</legend>
+                    <div class="main-product-option-radios">
+                      {% for value in option.values %}
+                        <div class="main-product-option-radio">
+                          <input
+                            {% if option.selected_value == value %}
+                              checked
+                            {% endif %}
+                            type="radio"
+                            name="{{ option.name }}"
+                            value="{{ value }}"
+                            class="hide"
+                            id="{{ option.name | handle }}-{{ value | handle }}"
+                          >
+                          <label for="{{ option.name | handle }}-{{ value | handle }}">
                             {{ value }}
-                          {% endif %}
-                        </label>
-                      </div>
-                    {% endfor %}
-                  </div>
-                </fieldset>
-              {% endfor %}
-            </div>
-            <input class="product__button button" type="submit" value="{{section.settings.button_text}}">
+                          </label>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </fieldset>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            <button
+              {% unless product.selected_or_first_available_variant.available %}
+                disabled
+              {% endunless %}
+              class="button full main-product-add-to-cart"
+              type="submit"
+              class="main-product-add"
+            >
+              {% if product.selected_or_first_available_variant.available %}
+                Add To Cart
+              {% else %}
+                Out of Stock
+              {% endif %}
+            </button>
           {% endform %}
-        {% endif %}
+        </div>
       </div>
     </div>
   </div>
 </div>
 <script>
-  // Product json
-  var product = {{ product | json }}
+  
+  
+  
+  
+  
+  
+  
+  let productData; // Declare productData in a scope accessible to both parts
 
-  // Root div
-  var root = document.querySelector('#main-product--{{ section.id }}')
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check if the product object is available and has a handle.
+    if ({{ product | json }} && {{ product.handle | json }}) {
+      const productHandle = {{ product.handle | json }};
+      
+      // Fetch the product data using Shopify's AJAX API.
+      fetch(`/products/${productHandle}.json`)
+        .then(response => response.json())
+        .then(data => {
+          productData = data; // Assign the fetched data to productData
+       //   console.log('Product Data:', productData);
+        })
+        .catch(error => {
+         // console.error('Error fetching product data:', error);
+        });
+    }
+  });
+
+  var root = document.querySelector('#main-product--{{ section.id }}');
 
   // Radio change
   root.querySelectorAll('.main-product-option input[type="radio"]').forEach(radio => {
-      radio.addEventListener('change', () => {
-          // Find selected options
-          var selectedOptions = []
+    radio.addEventListener('change', () => {
+      // Find selected options
+      var selectedOptions = [];
 
-          root.querySelectorAll('.main-product-option input[type="radio"]:checked').forEach(radio => {
-              selectedOptions.push(radio.value)
-          })
+      root.querySelectorAll('.main-product-option input[type="radio"]:checked').forEach(radio => {
+        selectedOptions.push(radio.value);
+      });
 
-          // Finding the matched variant
-          var matchedVariant = product.variants.find(variant => {
-              var pass = true
+     // console.log('Selected options:', selectedOptions); // Log selected options outside of the loop
 
-              for (var i = 0; i < selectedOptions.length; i++) {
-                  if (selectedOptions.indexOf(variant.options[i]) === -1) {
-                      pass = false
-                      break
-                  }
-              }
+      var matchedVariant = productData.product.variants.find(variant => {
+        // Split the variant title to extract the individual option values
+        var variantOptions = variant.title.split(' / ');
+    
+        // Check if each selected option value matches the corresponding variant option
+        var pass = selectedOptions.every((selectedOption, index) => {
+          return variantOptions[index] === selectedOption;
+        });
+    
+        return pass;
+      });
+    
+      if (matchedVariant) {
+        // console.log('Matched Variant:', matchedVariant);
+      } else {
+       //  console.error('No matched variant found.');
+      }
 
-              return pass
-          })
+      // Change product form variant id
+      root.querySelector('.main-product-id').value = matchedVariant.id;
 
-          // Change product form variant id
-          root.querySelector('.main-product-id').value = matchedVariant.id
+      // Change url
+      var url = new URL(window.location.href);
+      url.searchParams.set('variant', matchedVariant.id);
+      window.history.replaceState(null, null, url.toString());
+      // console.log(url.toString());
 
-          // Change url
-          var url = new URLParse(window.location.href, true)
-          url.query.variant = matchedVariant.id
-          window.history.replaceState(null, null, url.toString());
+      // Change prices
+      root.querySelector('.main-product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}");
+      root.querySelector('.main-product-compare').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}");
 
-          // Change prices
-          root.querySelector('.main-product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}")
-          root.querySelector('.main-product-compare').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}")
+      if (matchedVariant.compare_at_price > matchedVariant.price) {
+        root.querySelector('.main-product-compare').classList.remove('hide');
+      } else {
+        root.querySelector('.main-product-compare').classList.add('hide');
+      }
 
-          matchedVariant.compare_at_price > matchedVariant.price ?
-              root.querySelector('.main-product-compare').classList.remove('hide') :
-              root.querySelector('.main-product-compare').classList.add('hide')
+      // Change image
+      if (matchedVariant.image_id) {
+        // Find the image object in productData.product.images that matches the image_id
+        const matchedImage = productData.product.images.find(image => image.id === matchedVariant.image_id);
 
-          // Change image
-          if (matchedVariant.featured_image) {
-              root.querySelector('.main-product-image').setAttribute('src', matchedVariant.featured_image.src)
-              root.querySelector('.main-product-image-thumbs li.selected').classList.remove('selected')
-              root.querySelectorAll('.product-image-thumbs li')[matchedVariant.featured_image.position - 1].classList.add('selected')
+        if (matchedImage) {
+          // Update the src attribute of the main product image
+          root.querySelector('.main-product-image').setAttribute('src', matchedImage.src);
+
+          // Remove the 'selected' class from all thumbnail items
+          root.querySelectorAll('.main-product-image-thumbs li.selected').forEach(thumb => {
+            thumb.classList.remove('selected');
+          });
+
+          // Find and add the 'selected' class to the thumbnail that corresponds to the selected image
+          const thumbnailIndex = productData.product.images.findIndex(image => image.id === matchedImage.id);
+          if (thumbnailIndex !== -1) {
+            const selectedThumbnail = root.querySelectorAll('.product-image-thumbs li')[thumbnailIndex];
+            if (selectedThumbnail) {
+              selectedThumbnail.classList.add('selected');
+            }
           }
-
-          // Change button
-          var add = root.querySelector(".main-product-add-to-cart")
-
-          if (matchedVariant.available) {
-              add.textContent = "Add to Cart"
-              add.disabled = false
-          } else {
-              add.textContent = "Out of Stock"
-              add.disabled = true
-          }
-      })
-  })
+        } else {
+        //  console.error('No matching image found for variant image_id:', matchedVariant.image_id);
+        }
+      }
+    });
+  });
 
   // Image change
   root.querySelectorAll('.main-product-image-thumbs li').forEach(li => {
-      li.addEventListener('click', () => {
-          root.querySelector('.main-product-image-thumbs li.selected').classList.remove('selected')
-          li.classList.add('selected')
+    li.addEventListener('click', () => {
+      root.querySelector('.main-product-image-thumbs li.selected').classList.remove('selected');
+      li.classList.add('selected');
+      root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
+    });
+  });
 
-          root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'))
 
-      })
-  })
 
-  // Quantity change
-  root.querySelector('.quantity-selector-plus').addEventListener('click', () => {
-      var currentVal = Number(root.querySelector('#quantity').value)
-      root.querySelector('#quantity').value = currentVal + 1
-  })
 
-  root.querySelector('.quantity-selector-minus').addEventListener('click', () => {
-      var currentVal = Number(root.querySelector('#quantity').value)
 
-      if (currentVal > 1) {
-          root.querySelector('#quantity').value = currentVal - 1
-      }
-  })
+
 </script>
 {% schema %}
 {
