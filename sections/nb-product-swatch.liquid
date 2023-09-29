@@ -14,6 +14,11 @@
     }
   }
 {%- endstyle -%}
+<style>
+  .hide {
+    display: none;
+  }
+</style>
 {%- assign product = section.settings.selected_product -%}
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
@@ -143,12 +148,6 @@
   
   
   
-  
-  
-  
-  
-  
-  
   let productData; // Declare productData in a scope accessible to both parts
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -169,7 +168,7 @@
     }
   });
 
-  var root = document.querySelector('#main-product--{{ section.id }}')
+  var root = document.querySelector('#main-product--{{ section.id }}');
 
   // Radio change
   root.querySelectorAll('.main-product-option input[type="radio"]').forEach(radio => {
@@ -181,41 +180,47 @@
         selectedOptions.push(radio.value);
       });
 
-      console.log('Sectected options:',selectedOptions); // Log selected options outside of the loop
-      console.log(productData.product)
+      console.log('Selected options:', selectedOptions); // Log selected options outside of the loop
 
       var matchedVariant = productData.product.variants.find(variant => {
-      // Split the variant title to extract the individual option values
-      var variantOptions = variant.title.split(' / ');
+        // Split the variant title to extract the individual option values
+        var variantOptions = variant.title.split(' / ');
     
-      // Check if each selected option value matches the corresponding variant option
-      var pass = selectedOptions.every((selectedOption, index) => {
-        return variantOptions[index] === selectedOption;
+        // Check if each selected option value matches the corresponding variant option
+        var pass = selectedOptions.every((selectedOption, index) => {
+          return variantOptions[index] === selectedOption;
+        });
+    
+        return pass;
       });
     
-      return pass;
-    });
-    
-    if (matchedVariant) {
-      console.log('Matched Variant:', matchedVariant);
-    } else {
-      console.error('No matched variant found.');
-    }
-  // Change product form variant id
-    root.querySelector('.main-product-id').value = matchedVariant.id
+      if (matchedVariant) {
+        console.log('Matched Variant:', matchedVariant);
+      } else {
+        console.error('No matched variant found.');
+      }
 
-    // Change url
-    var url = new URLParse(window.location.href, true)
-    url.query.variant = matchedVariant.id
-    window.history.replaceState(null, null, url.toString());
-    console.log( url.toString())
+      // Change product form variant id
+      root.querySelector('.main-product-id').value = matchedVariant.id;
+
+      // Change url
+      var url = new URL(window.location.href);
+      url.searchParams.set('variant', matchedVariant.id);
+      window.history.replaceState(null, null, url.toString());
+      console.log(url.toString());
+
+      // Change prices
+      root.querySelector('.main-product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}");
+      root.querySelector('.main-product-compare').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}");
+
+      if (matchedVariant.compare_at_price > matchedVariant.price) {
+        root.querySelector('.main-product-compare').classList.remove('hide');
+      } else {
+        root.querySelector('.main-product-compare').classList.add('hide');
+      }
     });
   });
-
-
-
-
-
+  
 
 
 
