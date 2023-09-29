@@ -191,127 +191,37 @@
 
 <div class=" product__section image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
   <div
-    id="main-product--{{ section.id }}"
     class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}"
   >
-    <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-      <div
-        class="product__image-with-text image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
-        {% if section.settings.height == 'adapt' and section.settings.image != blank %}
-          style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
-        {% endif %}
-      >
-        {% if product.selected_or_first_available_variant.featured_image %}
-          {% assign featured = product.selected_or_first_available_variant.featured_image %}
-          <img
-            class="main-product-image"
-            id="product-image"
-            src="{{ featured | image_url }}"
-            width="300"
-            height="200"
-            loading="lazy"
-          >
-        {% else %}
-          {% assign featured = product.featured_image %}
-          <img
-            class="main-product-image"
-            id="product-image"
-            src="{{ featured | image_url }}"
-            width="300"
-            height="200"
-            loading="lazy"
-          >
-        {% endif %}
-      </div>
-    </div>
-    <div class="image-with-text__text-item grid__item">
-      <div
-        id="ImageWithText--{{ section.id }}"
-        class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
-      >
-        {% comment %} ratings, header and description here {% endcomment %}
-        {%- for block in section.blocks -%}
-          {% case block.type %}
-            {%- when 'ratings' -%}
-              <div class="product__ratings-block mobile">
-                {% assign rating = block.settings.ratings | round %}
-                <div class="product__star-rating">
-                  {% for i in (1..rating) %}
-                    <span class="star rated">&#9733;</span>
-                  {% endfor %}
-                </div>
-                <p class="product__ratings-paragraph">
-                  {{ block.settings.paragraph_text | escape }}
-                </p>
-              </div>
-            {%- when 'heading' -%}
-              {%- if block.settings.heading == blank -%}
-                <h2
-                  class="product__header rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                  {{ block.shopify_attributes }}
-                  {% if settings.animations_reveal_on_scroll %}
-                    data-cascade
-                    style="--animation-order: {{ forloop.index }};"
-                  {% endif %}
-                >
-                  <span>It Works</span> When Others Don't!
-                </h2>
-              {%- else -%}
-                <h2
-                  class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                  {{ block.shopify_attributes }}
-                  {% if settings.animations_reveal_on_scroll %}
-                    data-cascade
-                    style="--animation-order: {{ forloop.index }};"
-                  {% endif %}
-                >
-                  {{ block.settings.heading }}
-                </h2>
-              {%- endif -%}
-
-            {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                {{ block.settings.text }}
-              </div>
-          {%- endcase -%}
-        {%- endfor -%}
-
-        {% form 'product', product %}
-          <input
-            class="main-product-id hide"
-            type="hidden"
-            name="id"
-            value="{{ product.selected_or_first_available_variant.id }}"
-          >
-
-          {% if product.variants.size > 1 %}
-            <div class="main-product-options">
-              {% for option in product.options_with_values %}
-                <fieldset class="main-product-option">
-                  <legend>{{ option.name }}</legend>
-                  <div class="main-product-option-radios">
-                    {% for value in option.values %}
-                      <div class="main-product-option-radio">
-                        <input
-                          {% if option.selected_value == value %}
-                            checked
-                          {% endif %}
-                          type="radio"
-                          name="{{ option.name }}"
-                          value="{{ value }}"
-                          class="hide"
-                          id="{{ option.name | handle }}-{{ value | handle }}"
-                        >
-                        <label for="{{ option.name | handle }}-{{ value | handle }}">
-                          {{ value }}
-                        </label>
-                      </div>
-                    {% endfor %}
-                  </div>
-                </fieldset>
-              {% endfor %}
-            </div>
+    <div id="main-product--{{ section.id }}" class="main-product">
+      <div class="width">
+        <div class="main-product-left">
+          {% if product.selected_or_first_available_variant.featured_image %}
+            {% assign featured = product.selected_or_first_available_variant.featured_image %}
+            <img
+              class="main-product-image"
+              id="product-image"
+              src="{{ featured | image_url }}"
+              width="300"
+              height="200"
+              loading="lazy"
+            >
+          {% else %}
+            {% assign featured = product.featured_image %}
+            <img
+              class="main-product-image"
+              id="product-image"
+              src="{{ featured | image_url }}"
+              width="300"
+              height="200"
+              loading="lazy"
+            >
           {% endif %}
+        </div>
+
+        <div class="main-product-right">
+          <h1>{{ product.title }}</h1>
+
           <div class="main-product-prices">
             <p class="main-product-compare {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hide{% endunless %}">
               {{ product.selected_or_first_available_variant.compare_at_price | money }}
@@ -322,26 +232,72 @@
             </p>
           </div>
 
-          <button
-            {% unless product.selected_or_first_available_variant.available %}
-              disabled
-            {% endunless %}
-            class="button full main-product-add-to-cart"
-            type="submit"
-            class="main-product-add"
-          >
-            {% if product.selected_or_first_available_variant.available %}
-              Add To Cart
-            {% else %}
-              Out of Stock
+          <div class="main-product-description">
+            {{ product.description }}
+          </div>
+
+          {% form 'product', product %}
+            <input
+              class="main-product-id hide"
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}"
+            >
+
+            {% if product.variants.size > 1 %}
+              <div class="main-product-options">
+                {% for option in product.options_with_values %}
+                  <fieldset class="main-product-option">
+                    <legend>{{ option.name }}</legend>
+                    <div class="main-product-option-radios">
+                      {% for value in option.values %}
+                        <div class="main-product-option-radio">
+                          <input
+                            {% if option.selected_value == value %}
+                              checked
+                            {% endif %}
+                            type="radio"
+                            name="{{ option.name }}"
+                            value="{{ value }}"
+                            class="hide"
+                            id="{{ option.name | handle }}-{{ value | handle }}"
+                          >
+                          <label for="{{ option.name | handle }}-{{ value | handle }}">
+                            {{ value }}
+                          </label>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </fieldset>
+                {% endfor %}
+              </div>
             {% endif %}
-          </button>
-        {% endform %}
+
+            <button
+              {% unless product.selected_or_first_available_variant.available %}
+                disabled
+              {% endunless %}
+              class="button full main-product-add-to-cart"
+              type="submit"
+              class="main-product-add"
+            >
+              {% if product.selected_or_first_available_variant.available %}
+                Add To Cart
+              {% else %}
+                Out of Stock
+              {% endif %}
+            </button>
+          {% endform %}
+        </div>
       </div>
     </div>
   </div>
 </div>
 <script>
+  
+  
+  
+  
   
   
   
@@ -454,6 +410,9 @@
       root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
     });
   });
+
+
+
 
 
 
