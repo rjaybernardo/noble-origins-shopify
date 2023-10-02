@@ -355,7 +355,7 @@
           transition: opacity 0.3s;
           white-space: nowrap;
           bottom: 110%; /* Position the tooltip above the image */
-          left: 150%; /* Center the tooltip horizontally */
+          left: 110%; /* Center the tooltip horizontally */
           transform: translateX(-50%);
           }
 
@@ -369,7 +369,7 @@
           border-right: 10px solid transparent;
           border-top: 10px solid #16B1FF; /* Change the color here for the tail */
           top: 90%; /* Position the tail just below the tooltip */
-          left: 10%; /* Center the tail horizontally */
+          left: 30%; /* Center the tail horizontally */
           transform: translateX(-30%);
         }
 
@@ -403,6 +403,10 @@
 
                               padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
 
+                                }
+                                .tooltip-text {
+
+                                left: 150%; /* Center the tooltip horizontally */
                                 }
                               }
 </style>
@@ -619,6 +623,16 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 let productData; // Declare productData in a scope accessible to both parts
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -727,6 +741,16 @@ let productData; // Declare productData in a scope accessible to both parts
       root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
     });
   });
+
+
+
+
+
+
+
+
+
+
 
 
 
