@@ -37,6 +37,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 150%;
+        margin: 12px 0;
       }
       .product__image-with-text {
       display: flex;
@@ -98,6 +99,8 @@
           margin: 5px 0;
           }
 
+
+
           /* Add this CSS to your theme's stylesheet */
           /* Hide radio buttons */
           input[type='radio'] {
@@ -105,10 +108,37 @@
           }
 
           /* Style the labels as desired */
-          label {
-            /* Add your label styles here */
+          .subscription__text{
+          color: #000;
+          font-family: Bebas Neue;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 150%;
           }
-
+          .subscription__text span{
+          color:  #FFF;
+          text-align: center;
+          font-family: League Spartan;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          border-radius: 3px;
+          padding: 5px 13px;
+          background: var(--semantic-error, linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #FF4C51);
+          }
+          .bundle__text{
+          color: #000;
+          font-family: League Spartan;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+          }
+          .bundle__text span{
+          font-weight: 500;
+          }
           /* Optional: Apply custom styles to labels based on their attributes */
           label[for*='subscription'] {
             /* Styles for subscription labels */
@@ -125,6 +155,7 @@
           display: flex;
           gap: 10px;
           align-items: flex-end;
+          flex-wrap: wrap;
         }
 
 
@@ -135,6 +166,7 @@
           background: white;
           border: 1px solid #51525C;
           transition: 0.2s border-color;
+          border-radius: 0;
         }
 
         .main-product-option-radio input:checked + label,
@@ -163,6 +195,7 @@
 
         .main-product-option {
           margin-bottom: 5px;
+          padding: 0;
         }
 
         .main-product-option label {
@@ -178,7 +211,91 @@
         justify-content: center;
         align-items: center;
         text-wrap: nowrap;
+
         }
+        .bundle__label{
+         border: none !important;
+
+        }
+        .bundle__label img{
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+        }
+        .main-product-prices{
+        gap: 5px;
+        }
+        .main-product-compare{
+        color:  #A0A0AB;
+        font-family: League Spartan;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        margin: 30px 0;
+
+        }
+        .main-product-price{
+        color: #000;
+        font-family: League Spartan;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        text-transform: capitalize;
+        margin: 0;
+        }
+        .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: auto;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+      .main-product-add-to-cart{
+      width: 100%;
+      }
+      .main-product-add{
+      color: #FFF
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      padding: 25px 40px;
+      border: 2px solid  #C20004;
+      background:  #C20004;
+      }
+      .product-image-with-text__content{
+      align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-self: center;
+    padding: 0px
+    position: relative;
+    z-index: 1;
+      }
         @media(min-width:750px){
         .product__ratings-block{
         width: auto;
@@ -189,10 +306,21 @@
         .product__section{
         position:relative;
         }
+        .main-product-prices{
+        gap: 20px;
+        }
         .product__button {
         width: auto ;
       }
-        }
+      .main-product-add-to-cart{
+      width: auto;
+      }
+      .product-image-with-text__content{
+
+    padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
+
+      }
+    }
 </style>
 {% assign scheme1 = settings.color_schemes | first %}
 {%- assign product = section.settings.selected_product -%}
@@ -235,7 +363,7 @@
     <div class="image-with-text__text-item grid__item">
       <div
         id="ImageWithText--{{ section.id }}"
-        class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
+        class="product-image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
       >
         {% comment %} ratings, header and description here {% endcomment %}
         {%- for block in section.blocks -%}
@@ -296,7 +424,13 @@
             <div class="main-product-options">
               {% for option in product.options_with_values %}
                 <fieldset class="main-product-option">
-                  <legend>{{ option.name }}</legend>
+                  <legend>
+                    {% if option.name == 'Subscription' %}
+                      <p class="subscription__text">Subscribe: <span class="content">7% off + Free Ship</span></p>
+                    {% elsif option.name == 'Bundle' %}
+                      <p class="bundle__text">Variation: <span class="strong">The Ultimate Bundle</span></p>
+                    {% endif %}
+                  </legend>
                   <div class="main-product-option-radios">
                     {% for value in option.values %}
                       <div class="main-product-option-radio">
@@ -314,9 +448,21 @@
                           for="{{ option.name | handle }}-{{ value | handle }}"
                           {% if option.name == 'Subscription' %}
                             class="subscription__label"
+                          {%- else -%}
+                            class="bundle__label"
                           {% endif %}
                         >
-                          {{ value }}
+                          {% if option.name == 'Bundle' %}
+                            <img
+                              src="{{ 'p' | append: value | append: '.png' | asset_url }}"
+                              width="auto"
+                              height="auto"
+                              loading="lazy"
+                              alt="{{ value }}"
+                            >
+                          {% else %}
+                            {{ value }}
+                          {% endif %}
                         </label>
                       </div>
                     {% endfor %}
@@ -345,7 +491,7 @@
             class="main-product-add"
           >
             {% if product.selected_or_first_available_variant.available %}
-              Add To Cart
+              {{ section.settings.button_text }}
             {% else %}
               Out of Stock
             {% endif %}
@@ -367,7 +513,18 @@
   
   
   
-  let productData; // Declare productData in a scope accessible to both parts
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   let productData; // Declare productData in a scope accessible to both parts
 
   document.addEventListener('DOMContentLoaded', function() {
     // Check if the product object is available and has a handle.
@@ -475,6 +632,17 @@
       root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
     });
   });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
