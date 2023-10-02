@@ -34,6 +34,10 @@
   .beyond__header span {
     color: #c20004;
   }
+  p span.bg-red {
+    background-color: #c20004;
+    color: white;
+  }
   .beyond__description {
     color: #3f3f46;
     font-size: clamp(16px, 2.25vw, 20px);
@@ -64,7 +68,7 @@
     color: #18181b;
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 150%;
   }
   .beyond__grid {
@@ -219,16 +223,34 @@
             {{ section.settings.heading }}
           </h2>
         {%- endif -%}
-        <div
-          class="beyond__description rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {{ block.shopify_attributes }}
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-          {% endif %}
-        >
-          {{ section.settings.text }}
-        </div>
+        {%- if section.settings.text == blank -%}
+          <div
+            class="beyond__description rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            <p>
+              Many have treaded the path of generic whey supplements, only to face hurdles like
+              <strong>bloating, artificial additives,</strong> and <strong>lackluster</strong> results. Discover how
+              Noble Origins rises above these common pitfalls, offering a solution that's both
+              <span class="bg-red">effective and pure.</span>
+            </p>
+          </div>
+        {%- else -%}
+          <div
+            class="beyond__description rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {{ section.settings.text }}
+          </div>
+        {%- endif -%}
       </div>
     </div>
 

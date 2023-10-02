@@ -17,8 +17,8 @@
 }
 @font-face {
   font-family: 'League Spartan';
-  src: url('LeagueSpartan-ExtraBold.woff2') format('woff2'),
-      url('LeagueSpartan-ExtraBold.woff') format('woff');
+  src: url('LeagueSpartan-Bold.woff2') format('woff2'),
+      url('LeagueSpartan-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
