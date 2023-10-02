@@ -94,9 +94,7 @@
                                 class="hide"
                                 id="{{ option.name | handle }}-{{ value | handle }}"
                               >
-                              <label for="{{ option.name | handle }}-{{ value | handle }}">
-                                {{ value }}
-                              </label>
+                              <label for="{{ option.name | handle }}-{{ value | handle }}"> {{ value }} </label>
                             </div>
                           {% endfor %}
                         </div>
@@ -129,6 +127,9 @@
 </div>
 
 <script>
+  
+  
+  
   
   let productData; // Declare productData in a scope accessible to both parts
 
@@ -238,6 +239,9 @@
       root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
     });
   });
+
+
+
 
 
 
