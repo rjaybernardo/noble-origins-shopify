@@ -15,6 +15,9 @@
   }
 {%- endstyle -%}
 <style>
+  .product__star-rating{
+  font-size: 24px;
+  }
     .main-product-image {
     object-fit: cover;
     width: 100%;
@@ -371,7 +374,7 @@
     }
 
     .tooltip-text {
-      left: 150%;
+      left: 100%;
     }
   }
 </style>
@@ -598,6 +601,8 @@
   
   
   
+  
+  
 
   const bundleSelectedValue = document.getElementById('bundle-selected-value');
   const bundleRadioButtons = document.querySelectorAll('input[name="Bundle"]');
@@ -709,6 +714,8 @@ root.querySelectorAll('.main-product-image-thumbs li').forEach(li => {
     root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
   });
 });
+
+
 
 
 
