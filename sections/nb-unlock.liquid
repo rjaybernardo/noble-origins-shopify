@@ -113,16 +113,16 @@
 >
   <div
     class="
-      section-{{ section.id }}-padding
-          multicolumn color-{{ section.settings.color_scheme }}
-          gradient
-          {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %}
-          background-{{ section.settings.background_style }}{% endunless %}
-          {% if section.settings.title == blank %} no-heading{% endif %}
-
-        content-container
-      {% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}
-        rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}
+            section-{{ section.id }}-padding
+                multicolumn color-{{ section.settings.color_scheme }}
+                gradient
+                {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %}
+                background-{{ section.settings.background_style }}{% endunless %}
+                {% if section.settings.title == blank %} no-heading{% endif %}
+      content-width
+              content-container
+            {% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}
+              rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}
     "
   >
     <div

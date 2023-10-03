@@ -174,7 +174,7 @@
 
   .main-product-option-radios {
     display: flex;
-    gap: 10px;
+    gap: 7px;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -336,6 +336,10 @@
     line-height: 110%;
   }
   @media (min-width: 750px) {
+  .product__image-with-text img {
+        height: 540px;
+
+  }
     .product__ratings-block {
       width: auto;
     }
@@ -377,7 +381,7 @@
 >
   <div
     id="main-product--{{ section.id }}"
-    class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}"
+    class="image-with-text__grid content-width grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}"
   >
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
@@ -577,6 +581,17 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   const bundleSelectedValue = document.getElementById('bundle-selected-value');
   const bundleRadioButtons = document.querySelectorAll('input[name="Bundle"]');
@@ -688,6 +703,17 @@ root.querySelectorAll('.main-product-image-thumbs li').forEach(li => {
     root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
   });
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
