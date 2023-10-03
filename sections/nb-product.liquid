@@ -334,6 +334,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
+    padding: 20px 40px;
   }
   @media (min-width: 750px) {
   .product__image-with-text img {
@@ -361,7 +362,9 @@
     }
 
     .main-product-add-to-cart {
-      width: auto;
+    width: auto;
+    margin: 40px 0;
+    padding: 25px 40px;
     }
     .product-image-with-text__content {
       padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
@@ -592,6 +595,9 @@
   
   
   
+  
+  
+  
 
   const bundleSelectedValue = document.getElementById('bundle-selected-value');
   const bundleRadioButtons = document.querySelectorAll('input[name="Bundle"]');
@@ -703,6 +709,9 @@ root.querySelectorAll('.main-product-image-thumbs li').forEach(li => {
     root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
   });
 });
+
+
+
 
 
 
