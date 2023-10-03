@@ -14,13 +14,16 @@
   }
 {%- endstyle -%}
 <style>
+  .banner__section{
+  background: linear-gradient(to bottom, transparent 50%, white 50%),
+  url('{{ 'banner.jpg' | asset_url }}') top right/100% no-repeat;
+  }
   .banner__container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     height: 500px;
-    background: linear-gradient(to bottom, transparent 50%, white 50%),
-      url('{{ 'banner.jpg' | asset_url }}') top right/100% no-repeat;
+
   }
   .banner__text--container {
     order: 2;
@@ -97,13 +100,14 @@
   @media (min-width: 750px) {
     .banner__section {
       min-height: 850px;
+      background: linear-gradient(to left, transparent 50%, white 50%),
+      url('{{ 'banner.jpg' | asset_url }}') bottom right/100% no-repeat;
     }
     .banner__container {
       min-height: 850px;
       display: grid;
       grid-template-columns: minmax(0, 480px) 1fr;
-      background: linear-gradient(to left, transparent 50%, white 50%),
-      url('{{ 'banner.jpg' | asset_url }}') bottom right/100% no-repeat;
+
     }
 
     .banner__text--container {
@@ -153,8 +157,8 @@
       data-cascade
     {% endif %}
   >
-    <div class="banner__container page-width">
-      <div class="banner__text--container">
+    <div class="banner__container content-width">
+      <div class="banner__text--container ">
         <div class="banner__text--wrapper">
           {%- for block in section.blocks -%}
             {% case block.type %}
