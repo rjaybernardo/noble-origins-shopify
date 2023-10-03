@@ -159,13 +159,27 @@
       {
         "type": "range",
         "id": "page_width",
-        "min": 1000,
-        "max": 1900,
-        "step": 100,
-        "default": 1900,
+        "min": 1200, // Define the minimum value
+        "max": 2400, // Define the maximum value
+        "step": 120, // Define the step size
+        "default": 1920, // Set the default value to 1920
+        "unit": "px", // Specify the unit (e.g., pixels)
+        "label": "Page Width" // Label for the setting
+      }
+      
+,      
+      {
+        "type": "range",
+        "id": "content_width",
+        "min": 1200,      // Adjust the minimum value
+        "max": 1552,      // Adjust the maximum value
+        "step": 8,        // Adjust the step size to evenly divide the range
+        "default": 1432,  // Set the default value to a step within the range
         "unit": "px",
-        "label": "t:settings_schema.layout.settings.page_width.label"
-      },
+        "label": "Content width"
+      }
+      
+      ,
       {
         "type": "range",
         "id": "spacing_sections",
