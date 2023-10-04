@@ -165,13 +165,7 @@
             {% if section.settings.video != null %}
               {{
                 section.settings.video
-                | video_tag:
-                  image_size: '500x',
-                  autoplay: false,
-                  loop: false,
-                  muted: false,
-                  controls: true,
-                  class: 'video-responsive'
+                | video_tag: image_size: '500x', autoplay: false, loop: false, muted: false, controls: true, class: 'video-responsive'
               }}
             {%- else -%}
               <div class="video__placeholder">

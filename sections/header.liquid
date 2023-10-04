@@ -325,9 +325,9 @@
     >
       {%- liquid
         if cart == empty
-          render 'icon-cart-empty'
+          render 'cart'
         else
-          render 'icon-cart'
+          render 'cart'
         endif
       -%}
       <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
