@@ -7,6 +7,8 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -15,368 +17,430 @@
   }
 {%- endstyle -%}
 <style>
-  .product__star-rating{
-  font-size: 24px;
-  }
-    .main-product-image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
+      .product__star-rating{
+      font-size: 24px;
+      }
+        .main-product-image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
 
-  .hide {
-    display: none;
-  }
+      .hide {
+        display: none;
+      }
 
-  .product__ratings-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-  }
+      .product__ratings-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+      }
 
-  .product__star-rating {
-    color: #ffb400;
-    display: flex;
-    flex-wrap: nowrap;
-  }
+      .product__star-rating {
+        color: #ffb400;
+        display: flex;
+        flex-wrap: nowrap;
+      }
 
-  .product__ratings-paragraph {
-    color: #101012;
-    font-family: League Spartan;
-    font-size: clamp(12px, 1.6vw, 14px);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    margin: 12px 0;
-  }
+      .product__ratings-paragraph {
+        color: #101012;
+        font-family: League Spartan;
+        font-size: clamp(12px, 1.6vw, 14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 12px 0;
+      }
 
-  .product__image-with-text {
-    display: flex;
-    align-items: center;
-    border: none;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 300px;
-  }
+      .product__image-with-text {
+        display: flex;
+        align-items: center;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 300px;
+      }
 
-  .product__image-with-text img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    object-fit: contain;
-  }
+      .product__image-with-text img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        object-fit: contain;
+      }
 
-  .product__header {
-    font-size: clamp(40px, 5.5vw, 48px);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 110%;
-    text-transform: capitalize;
-    margin: 10px auto 15px;
-  }
+      .product__header {
+        font-size: clamp(40px, 5.5vw, 48px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: capitalize;
+        margin: 10px auto 15px;
+      }
 
-  .product__header span {
-    color: #c20004;
-  }
+      .product__header span {
+        color: #c20004;
+      }
 
-  .product__text {
-    color: #000;
-    font-family: League Spartan;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-  }
+      .product__text {
+        color: #000;
+        font-family: League Spartan;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
 
-  .product__button {
-    font-size: 24px;
-    font-family: League Spartan;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 110%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 40px;
-  }
+      .product__button {
+        font-size: 24px;
+        font-family: League Spartan;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 40px;
+      }
 
-  .subscription-option {
-    width: 61px;
-    height: 61px;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
-  }
+      .subscription-option {
+        width: 61px;
+        height: 61px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+      }
 
-  .bundle-option {
-    border: 0 !important;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 5px;
-  }
+      .bundle-option {
+        border: 0 !important;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 5px;
+      }
 
-  .bundle-option img {
-    display: block;
-    margin: 5px 0;
-  }
+      .bundle-option img {
+        display: block;
+        margin: 5px 0;
+      }
 
-  input[type='radio'] {
-    display: none;
-  }
+      input[type='radio'] {
+        display: none;
+      }
 
-  .subscription__text {
-    color: #000;
-    font-family: Bebas Neue;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%;
-  }
+      .subscription__text {
+        color: #000;
+        font-family: Bebas Neue;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+      }
 
-  .subscription__text span {
-    color: #fff;
-    text-align: center;
-    font-family: League Spartan;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border-radius: 3px;
-    padding: 5px 13px;
-    background: var(--semantic-error, linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #ff4c51);
-  }
+      .subscription__text span {
+        color: #fff;
+        text-align: center;
+        font-family: League Spartan;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 3px;
+        padding: 5px 13px;
+        background: var(--semantic-error, linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #ff4c51);
+      }
 
-  .bundle__text {
-    color: #000;
-    font-family: League Spartan;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-  }
+      .bundle__text {
+        color: #000;
+        font-family: League Spartan;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
 
-  .bundle__text span {
-    font-weight: 500;
-  }
+      .bundle__text span {
+        font-weight: 500;
+      }
 
-  label[for*='subscription'] {
-  }
+      label[for*='subscription'] {
+      }
 
-  label[for*='bundle'] {
-  }
+      label[for*='bundle'] {
+      }
 
-  fieldset {
-    border: none;
-  }
+      fieldset {
+        border: none;
+      }
 
-  .main-product-option-radios {
-    display: flex;
-    gap: 7px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+      .main-product-option-radios {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
 
-  .main-product-option-radio label {
-    display: inline-block;
-    padding: 0 12px;
-    line-height: 36px;
-    background: white;
-    border: 1px solid #51525c;
-    transition: 0.2s border-color;
-    border-radius: 0;
-  }
+      .main-product-option-radio label {
+        display: inline-block;
+        padding: 0 12px;
+        line-height: 36px;
+        background: white;
+        border: 1px solid #51525c;
+        transition: 0.2s border-color;
+        border-radius: 0;
+      }
 
-  .main-product-option-radio input:checked + label,
-  .main-product-option-radio label:hover {
-    color: white;
-    background-color: #51525c;
-  }
+      .main-product-option-radio input:checked + label,
+      .main-product-option-radio label:hover {
+        color: white;
+        background-color: #51525c;
+      }
 
-  .main-product-option-radio input:checked + label.bundle__label {
-    border: 1px solid #51525c;
-    background-color: white;
-  }
+      .main-product-option-radio input:checked + label.bundle__label {
+        border: 1px solid #51525c;
+        background-color: white;
+      }
 
-  .main-product-option-radio label.bundle__label {
-    border: none;
-  }
+      .main-product-option-radio label.bundle__label {
+        border: none;
+      }
 
-  .main-product-option-radio label.bundle__label:hover {
-    border: 1px solid #51525c;
-    background-color: white;
-  }
+      .main-product-option-radio label.bundle__label:hover {
+        border: 1px solid #51525c;
+        background-color: white;
+      }
 
-  .main-product-option .main-product-select,
-  .main-product-quantity {
-    display: block;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    height: 54px;
-    font-size: 16px;
-  }
+      .main-product-option .main-product-select,
+      .main-product-quantity {
+        display: block;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        height: 54px;
+        font-size: 16px;
+      }
 
-  .main-product-select {
-    background-image: url("{{ 'down.svg' | asset_url }}");
-    background-repeat: no-repeat;
-    background-position: right 16px center;
-    background-size: 10px;
-  }
+      .main-product-select {
+        background-image: url("{{ 'down.svg' | asset_url }}");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        background-size: 10px;
+      }
 
-  .main-product-option {
-    margin-bottom: 5px;
-    padding: 0;
-  }
+      .main-product-option {
+        margin-bottom: 5px;
+        padding: 0;
+      }
 
-  .main-product-option label {
-    font-weight: 500;
-    font-size: 14px;
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 5px;
-  }
+      .main-product-option label {
+        font-weight: 500;
+        font-size: 14px;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 5px;
+      }
 
-  label.subscription__label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 70px;
-  width: 70px;
-  padding: 0;
-  margin: 0;
-  }
+      label.subscription__label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+      width: 70px;
+      padding: 0;
+      margin: 0;
+      }
 
-  .bundle__label {
-  }
+      .bundle__label {
+      }
 
-  .bundle__label img {
-    display: flex;
-    align-items: center;
-    padding: 5px 0;
-  }
+      .bundle__label img {
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+      }
 
-  .main-product-prices {
-    gap: 5px;
-  }
+      .tooltip-container {
+        position: relative;
+        display: inline-block;
+      }
 
-  .main-product-compare {
-    color: #a0a0ab;
-    font-family: League Spartan;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 110%;
-    margin: 30px 0;
+      .tooltip-trigger {
+        cursor: pointer;
+      }
+
+      .tooltip-text {
+        visibility: hidden;
+        background-color: #16b1ff;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        padding: 0px 15px;
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s;
+        white-space: nowrap;
+        bottom: 110%;
+        left: 60%;
+        transform: translateX(-50%);
+      }
+
+      .tooltip-text::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #16b1ff;
+        top: 90%;
+        left: 30%;
+        transform: translateX(-30%);
+      }
+
+      .tooltip-container:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+      }
+      .main-product-add-to-cart {
+        width: 100%;
+        font-weight: bold;
+        font-family: League Spartan;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        padding: 20px 40px;
+      }
+      .subscription__select{
+        padding: 15px 160px 15px 10px;
+        appearance: none;
+        outline: none;
+        background-color: white;
+        border: 1px solid #00000021;
+        font-size:11px;
+        font-weight: 700;
+
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='gray' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 25px;
+      }
+
+      .
+      .subscription__select:focus{
+        outline: none ;
+        box-shadow: none;
+      }
+      .subscription__select option:checked{
+
+   }
+
+
+      .main-product-option-dropdown{
+      position: relative;
+      }
+
+      .subscription-content{
+      background-color: red;
+      color:white;
+      position:absolute;
+      top:-22px;
+      right:25px;
+      padding: 0px 10px;
+      font-size: 11px;
+      border-radius: 2px;
+      }
+
+      .main-product-prices {
+      position:absolute;
+      gap: 5px;
+      top:-8px;
+      right:40px;
+      height: 40px;
+    }
+
+    .main-product-compare {
+      color: #a0a0ab;
+      font-family: League Spartan;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+      margin: 30px 0;
+    }
+
+    .main-product-price {
+      color: #000;
+      font-family: League Spartan;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+      text-transform: capitalize;
+      margin: 0;
+    }
+
+
+      @media (min-width: 750px) {
+      .subscription__select{
+        padding: 15px 220px 15px 15px;
+        font-size:12px;
+
+      }
+      .subscription__select:focus{
+        outline: none ;
+        box-shadow: none;
+      }
+
+    .main-product-compare {
+    font-size: 18px;
   }
 
   .main-product-price {
-    color: #000;
-    font-family: League Spartan;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 110%;
-    text-transform: capitalize;
-    margin: 0;
+    font-size: 28px;
   }
+      .product__image-with-text img {
+            height: 540px;
 
-  .tooltip-container {
-    position: relative;
-    display: inline-block;
-  }
+      }
+        .product__ratings-block {
+          width: auto;
+        }
 
-  .tooltip-trigger {
-    cursor: pointer;
-  }
+        .product__header {
+          margin: 10px 0 15px;
+        }
 
-  .tooltip-text {
-    visibility: hidden;
-    background-color: #16b1ff;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
-    padding: 0px 15px;
-    position: absolute;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s;
-    white-space: nowrap;
-    bottom: 110%;
-    left: 60%;
-    transform: translateX(-50%);
-  }
+        .product__section {
+          position: relative;
+        }
 
-  .tooltip-text::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #16b1ff;
-    top: 90%;
-    left: 30%;
-    transform: translateX(-30%);
-  }
 
-  .tooltip-container:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
-  .main-product-add-to-cart {
-    width: 100%;
-    font-weight: bold;
-    font-family: League Spartan;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 110%;
-    padding: 20px 40px;
-  }
-  @media (min-width: 750px) {
-  .product__image-with-text img {
-        height: 540px;
 
-  }
-    .product__ratings-block {
-      width: auto;
-    }
+        .product__button {
+          width: auto;
+        }
 
-    .product__header {
-      margin: 10px 0 15px;
-    }
+        .main-product-add-to-cart {
+        width: auto;
+        margin: 20px 0;
+        padding: 25px 40px;
+        }
+        .product-image-with-text__content {
+          padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
+        }
 
-    .product__section {
-      position: relative;
-    }
+        .tooltip-text {
+          left: 100%;
+        }
 
-    .main-product-prices {
-      gap: 20px;
-    }
-
-    .product__button {
-      width: auto;
-    }
-
-    .main-product-add-to-cart {
-    width: auto;
-    margin: 40px 0;
-    padding: 25px 40px;
-    }
-    .product-image-with-text__content {
-      padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
-    }
-
-    .tooltip-text {
-      left: 100%;
-    }
-  }
+      }
 </style>
 {% assign scheme1 = settings.color_schemes | first %}
 {%- assign product = section.settings.selected_product -%}
@@ -493,9 +557,7 @@
               {% for option in product.options_with_values %}
                 <fieldset class="main-product-option">
                   <legend>
-                    {% if option.name == 'Subscription' %}
-                      <p class="subscription__text">Subscribe: <span class="content">7% off + Free Ship</span></p>
-                    {% elsif option.name == 'Bundle' %}
+                    {% if option.name == 'Bundle' %}
                       <p class="bundle__text">
                         Variation:
                         <span class="strong" id="bundle-selected-value">
@@ -506,62 +568,105 @@
                           {% endfor %}
                         </span>
                       </p>
+                    {% elsif option.name == 'Subscription' %}
+
                     {% endif %}
                   </legend>
                   <div class="main-product-option-radios">
-                    {% for value in option.values %}
-                      <div class="main-product-option-radio">
-                        <input
-                          {% if option.selected_value == value %}
-                            checked
-                          {% endif %}
-                          type="radio"
+                    {% if option.name == 'Subscription' %}
+                      <div class="main-product-option-dropdown">
+                        <p class="subscription-content">
+                          {{ section.settings.discount_text }}
+                          <span id="discount-text-2-months" style="display: none;">
+                            {{ section.settings.discount_text_2_months }}
+                          </span>
+                        </p>
+                        <div class="main-product-prices">
+                          <p class="main-product-compare {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hide{% endunless %}">
+                            {{ product.selected_or_first_available_variant.compare_at_price | money }}
+                          </p>
+
+                          <p class="main-product-price">
+                            {{ product.selected_or_first_available_variant.price | money }}
+                          </p>
+                        </div>
+                        <select
                           name="{{ option.name }}"
-                          value="{{ value }}"
-                          class="hide"
-                          id="{{ option.name | handle }}-{{ value | handle }}"
+                          class="subscription__select"
                         >
-                        <label
-                          for="{{ option.name | handle }}-{{ value | handle }}"
-                          {% if option.name == 'Subscription' %}
-                            class="subscription__label"
-                          {%- else -%}
-                            class="bundle__label"
-                          {% endif %}
-                        >
-                          {% if option.name == 'Bundle' %}
-                            <div class="tooltip-container">
-                              <img
-                                src="{{ value | append: '.png' | asset_url }}"
-                                width="auto"
-                                height="auto"
-                                loading="lazy"
-                                alt="{{ value }}"
-                                class="tooltip-trigger"
-                              >
-                              <div class="tooltip-text">{{ value }}</div>
-                            </div>
-                          {% else %}
-                            {{ value }}
-                          {% endif %}
-                        </label>
+                          {% for value in option.values %}
+                            <option
+                              {% if option.selected_value == value %}
+                                selected
+                              {% endif %}
+                              value="{{ value }}"
+                            >
+                              {% if forloop.first %}
+                                {{ value }}
+                              {% else %}
+                                SUBSCRIBE & SAVE ({{ value }})
+                              {% endif %}
+                            </option>
+                          {% endfor %}
+                        </select>
                       </div>
-                    {% endfor %}
+                    {% else %}
+                      {% for value in option.values %}
+                        <div class="main-product-option-radio">
+                          <input
+                            {% if option.selected_value == value %}
+                              checked
+                            {% endif %}
+                            type="radio"
+                            name="{{ option.name }}"
+                            value="{{ value }}"
+                            class="hide"
+                            id="{{ option.name | handle }}-{{ value | handle }}"
+                          >
+                          <label
+                            for="{{ option.name | handle }}-{{ value | handle }}"
+                            {% if option.name == 'Bundle' %}
+                              class="bundle__label"
+                            {%- else -%}
+                              class="subscription__label"
+                            {% endif %}
+                          >
+                            {% if option.name == 'Bundle' %}
+                              <div class="tooltip-container">
+                                <img
+                                  src="{{ value | append: '.png' | asset_url }}"
+                                  width="auto"
+                                  height="auto"
+                                  loading="lazy"
+                                  alt="{{ value }}"
+                                  class="tooltip-trigger"
+                                >
+                                <div class="tooltip-text">{{ value }}</div>
+                              </div>
+                            {% else %}
+                              {{ value }}
+                            {% endif %}
+                          </label>
+                        </div>
+                      {% endfor %}
+                    {% endif %}
                   </div>
                 </fieldset>
               {% endfor %}
             </div>
           {% endif %}
 
-          <div class="main-product-prices">
-            <p class="main-product-compare {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hide{% endunless %}">
-              {{ product.selected_or_first_available_variant.compare_at_price | money }}
-            </p>
+          {% comment %}
+            <div class="main-product-prices">
+              <p class="main-product-compare {% unless product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}hide{% endunless %}">
+                {{ product.selected_or_first_available_variant.compare_at_price | money }}
+              </p>
 
-            <p class="main-product-price">
-              {{ product.selected_or_first_available_variant.price | money }}
-            </p>
-          </div>
+              <p class="main-product-price">
+                {{ product.selected_or_first_available_variant.price | money }}
+              </p>
+            </div>
+          {% endcomment %}
 
           <button
             {% unless product.selected_or_first_available_variant.available %}
@@ -599,14 +704,7 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-
+  let productData = {}; // Declare productData as a global variable
   const bundleSelectedValue = document.getElementById('bundle-selected-value');
   const bundleRadioButtons = document.querySelectorAll('input[name="Bundle"]');
 
@@ -614,153 +712,137 @@
     radioButton.addEventListener('change', () => {
       const selectedValue = document.querySelector('input[name="Bundle"]:checked').value;
       bundleSelectedValue.textContent = selectedValue;
+      updateProduct();
     });
   });
 
-function fetchProductData(productHandle) {
-  fetch(`/products/${productHandle}.json`)
-    .then(response => response.json())
-    .then(data => {
-      productData = data;
-    })
-    .catch(error => {
-      console.error('Error fetching product data:', error);
+  function fetchProductData(productHandle) {
+    fetch(`/products/${productHandle}.json`)
+      .then(response => response.json())
+      .then(data => {
+        productData = data;
+        updateProduct();
+      })
+      .catch(error => {
+        console.error('Error fetching product data:', error);
+      });
+  }
+
+  function updateProduct() {
+    const selectedOptions = [];
+    const root = document.querySelector('#main-product--{{ section.id }}');
+
+    root.querySelectorAll('.main-product-option input[type="radio"]:checked').forEach(radio => {
+      selectedOptions.push(radio.value);
     });
-}
 
-function updateProduct() {
-  // Find selected options
-  const selectedOptions = [];
-  const root = document.querySelector('#main-product--{{ section.id }}');
+    const selectedDropdown = root.querySelector('.subscription__select');
+    const selectedDropdownValue = selectedDropdown.value;
 
-  root.querySelectorAll('.main-product-option input[type="radio"]:checked').forEach(radio => {
-    selectedOptions.push(radio.value);
-  });
+    // console.log('Selected Dropdown Value:', selectedDropdownValue);
 
-  const matchedVariant = productData.product.variants.find(variant => {
-    // Split the variant title to extract the individual option values
-    const variantOptions = variant.title.split(' / ');
+     // Check for subscription content
+     const subscriptionContent = root.querySelector('.subscription-content');
 
-    // Check if each selected option value matches the corresponding variant option
-    return selectedOptions.every((selectedOption, index) => variantOptions[index] === selectedOption);
-  });
-
-  if (matchedVariant) {
-    // Change product form variant id
-    root.querySelector('.main-product-id').value = matchedVariant.id;
-
-    // Change url
-    const url = new URL(window.location.href);
-    url.searchParams.set('variant', matchedVariant.id);
-    window.history.replaceState(null, null, url.toString());
-
-    // Change prices
-    root.querySelector('.main-product-price').textContent = formatMoney(matchedVariant.price, "{{ shop.money_format }}");
-    root.querySelector('.main-product-compare').textContent = formatMoney(matchedVariant.compare_at_price, "{{ shop.money_format }}");
-
-    if (matchedVariant.compare_at_price > matchedVariant.price) {
-      root.querySelector('.main-product-compare').classList.remove('hide');
-    } else {
-      root.querySelector('.main-product-compare').classList.add('hide');
+     if (selectedDropdownValue === 'monthly') {
+      // Use the default discount_text from section settings for 1 Month
+      root.querySelector('.subscription-content').style.display = 'block';
+      subscriptionContent.textContent = '{{ section.settings.discount_text }}';
+    } else if (selectedDropdownValue === 'every 2 months') {
+      const discountText2Months = '{{ section.settings.discount_text_2_months }}';
+      if (discountText2Months !== '') {
+        // Set the discount text for 2 Months from section settings
+        root.querySelector('.subscription-content').style.display = 'block';
+        subscriptionContent.textContent = discountText2Months;
+      } else {
+        // If discount_text_2_months is not defined, hide the subscription content
+        root.querySelector('.subscription-content').style.display = 'none';
+      }
     }
 
-    // Change image
-    if (matchedVariant.image_id) {
-      const matchedImage = productData.product.images.find(image => image.id === matchedVariant.image_id);
+    if (selectedDropdownValue === 'ONE TIME') {
+      root.querySelector('.subscription-content').style.display = 'none';
+    } else {
+      root.querySelector('.subscription-content').style.display = 'block';
+    }
 
-      if (matchedImage) {
-        // Update the src attribute of the main product image
-        root.querySelector('.main-product-image').setAttribute('src', matchedImage.src);
+    if (productData.product && productData.product.variants) {
+      const matchedVariant = productData.product.variants.find(variant => {
+        const variantOptions = variant.title.split(' / ');
 
-        // Remove the 'selected' class from all thumbnail items
-        root.querySelectorAll('.main-product-image-thumbs li.selected').forEach(thumb => {
-          thumb.classList.remove('selected');
-        });
+        return selectedOptions.every((selectedOption, index) => variantOptions[index] === selectedOption);
+      });
 
-        // Find and add the 'selected' class to the thumbnail that corresponds to the selected image
-        const thumbnailIndex = productData.product.images.findIndex(image => image.id === matchedImage.id);
-        if (thumbnailIndex !== -1) {
-          const selectedThumbnail = root.querySelectorAll('.product-image-thumbs li')[thumbnailIndex];
-          if (selectedThumbnail) {
-            selectedThumbnail.classList.add('selected');
+      if (matchedVariant) {
+        root.querySelector('.main-product-id').value = matchedVariant.id;
+        const url = new URL(window.location.href);
+        url.searchParams.set('variant', matchedVariant.id);
+        window.history.replaceState(null, null, url.toString());
+
+        root.querySelector('.main-product-price').textContent = formatMoney(matchedVariant.price, '{{ shop.money_format }}');
+        root.querySelector('.main-product-compare').textContent = formatMoney(
+          matchedVariant.compare_at_price,
+          '{{ shop.money_format }}'
+        );
+
+        if (matchedVariant.compare_at_price > matchedVariant.price) {
+          root.querySelector('.main-product-compare').classList.remove('hide');
+        } else {
+          root.querySelector('.main-product-compare').classList.add('hide');
+        }
+
+        if (matchedVariant.image_id) {
+          const matchedImage = productData.product.images.find(image => image.id === matchedVariant.image_id);
+
+          if (matchedImage) {
+            root.querySelector('.main-product-image').setAttribute('src', matchedImage.src);
+            root.querySelectorAll('.main-product-image-thumbs li.selected').forEach(thumb => {
+              thumb.classList.remove('selected');
+            });
+
+            const thumbnailIndex = productData.product.images.findIndex(image => image.id === matchedImage.id);
+            if (thumbnailIndex !== -1) {
+              const selectedThumbnail = root.querySelectorAll('.product-image-thumbs li')[thumbnailIndex];
+              if (selectedThumbnail) {
+                selectedThumbnail.classList.add('selected');
+              }
+            }
+          } else {
+            console.error('No matching image found for variant image_id:', matchedVariant.image_id);
           }
         }
       } else {
-        console.error('No matching image found for variant image_id:', matchedVariant.image_id);
+        console.error('No matched variant found.');
       }
     }
-  } else {
-    console.error('No matched variant found.');
   }
-}
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Check if the product object is available and has a handle.
-  if ({{ product | json }} && {{ product.handle | json }}) {
-    const productHandle = {{ product.handle | json }};
-    fetchProductData(productHandle);
-  }
-});
-
-var root = document.querySelector('#main-product--{{ section.id }}');
-
-// Radio change event listener
-root.querySelectorAll('.main-product-option input[type="radio"]').forEach(radio => {
-  radio.addEventListener('change', updateProduct);
-});
-
-// Image change event listener
-root.querySelectorAll('.main-product-image-thumbs li').forEach(li => {
-  li.addEventListener('click', () => {
-    root.querySelector('.main-product-image-thumbs li.selected').classList.remove('selected');
-    li.classList.add('selected');
-    root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
+  document.addEventListener('DOMContentLoaded', function () {
+    if ({{ product | json }} && {{ product.handle | json }}) {
+      const productHandle = {{ product.handle | json }};
+      fetchProductData(productHandle);
+    }
+    updateProduct();
   });
-});
 
+  var root = document.querySelector('#main-product--{{ section.id }}');
 
+  root.querySelectorAll('.main-product-option input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', updateProduct);
+  });
 
+  const selectedDropdown = root.querySelector('.subscription__select');
+  selectedDropdown.addEventListener('change', updateProduct);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  root.querySelectorAll('.main-product-image-thumbs li').forEach(li => {
+    li.addEventListener('click', () => {
+      root.querySelector('.main-product-image-thumbs li.selected').classList.remove('selected');
+      li.classList.add('selected');
+      root.querySelector('.main-product-image').setAttribute('src', li.querySelector('img').getAttribute('src'));
+    });
+  });
 </script>
+
 {% schema %}
 {
   "name": "Noble Origins Product",
@@ -774,7 +856,18 @@ root.querySelectorAll('.main-product-image-thumbs li').forEach(li => {
       "label": "Select Product",
       "id": "selected_product"
     },
-
+    {
+      "type": "text",
+      "id": "discount_text",
+      "label": "1 Month Discount",
+      "default": "7% off + Free Ship"
+    },
+    {
+      "type": "text",
+      "id": "discount_text_2_months",
+      "label": "2 Months Discount",
+      "default": "12% off + Free Ship"
+    },
     {
       "type": "text",
       "id": "button_text",
