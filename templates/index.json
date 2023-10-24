@@ -388,6 +388,8 @@
       ],
       "settings": {
         "selected_product": "noble-origins",
+        "discount_text": "7% off + Free Ship",
+        "discount_text_2_months": "12% off + Free Ship",
         "button_text": "Order Now & SAVE!",
         "height": "medium",
         "desktop_image_width": "medium",
@@ -559,7 +561,7 @@
           "settings": {
             "heading": "Where is it sourced?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>We source from farms in New Zealand.<\/p>",
             "page": ""
           }
         },
@@ -577,7 +579,7 @@
           "settings": {
             "heading": "Where is it made?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Proudly in the United States<\/p>",
             "page": ""
           }
         },
@@ -586,7 +588,7 @@
           "settings": {
             "heading": "What is silicon dioxide?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>It is a all-natural anti-caking agent and helps with mixing in liquids so you don't get clumps. Silicon dioxide, also known as silica or SiO2, is a naturally occurring compound. It's made of silicon and oxygen. Both elements are abundant on our planet. If you've held a rock or touched sand, you've encountered silicon dioxide Certain studies have shown that silicon is an essential mineral for the body and helps build strong bones, hair, nails, and teeth. It may have anti-aging effects and help prevent symptoms tied to deficiencies in silicon, such as: • abnormal growth • weak bones • deformities in skull and peripheral bones • joint pain • poor mineral balance<\/p>",
             "page": ""
           }
         },
@@ -595,7 +597,7 @@
           "settings": {
             "heading": "Is it tested?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Every Noble batch is third-party tested for purity and quality.<\/p>",
             "page": ""
           }
         }
