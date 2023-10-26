@@ -370,21 +370,12 @@
             "text": "<p>Have other products let you down? Try ours! It's made to fix common problems. Say goodbye to past failures and hello to real solutions<\/p>",
             "text_style": "body"
           }
-        },
-        "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Order Now & SAVE!",
-            "button_link": "",
-            "button_style_secondary": false
-          }
         }
       },
       "block_order": [
         "470cc8fd-d654-48ff-9195-baaecc4c69d8",
         "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-heading-1",
-        "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-text-1",
-        "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-button-1"
+        "template--21039849799998__f9e001d7-96d0-4bbc-915a-d6372ee9bec6-text-1"
       ],
       "settings": {
         "selected_product": "noble-origins",
@@ -565,12 +556,12 @@
             "page": ""
           }
         },
-        "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-2": {
+        "e14861da-8c25-4ff1-9169-8e8e1cfa6462": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "We source from farms in New Zealand?",
+            "heading": "How many organs and colostrum per serving?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Per serving – 250mg total of the following: Beef Heart, Beef Liver, Beef Kidney, Beef Spleen, Beef Pancreas, Beef Blood, Beef Bone & Marrow, Colostrum Powder<\/p>",
             "page": ""
           }
         },
@@ -588,7 +579,7 @@
           "settings": {
             "heading": "What is silicon dioxide?",
             "icon": "none",
-            "row_content": "<p>It is a all-natural anti-caking agent and helps with mixing in liquids so you don't get clumps. Silicon dioxide, also known as silica or SiO2, is a naturally occurring compound. It's made of silicon and oxygen. Both elements are abundant on our planet. If you've held a rock or touched sand, you've encountered silicon dioxide Certain studies have shown that silicon is an essential mineral for the body and helps build strong bones, hair, nails, and teeth. It may have anti-aging effects and help prevent symptoms tied to deficiencies in silicon, such as: • abnormal growth • weak bones • deformities in skull and peripheral bones • joint pain • poor mineral balance<\/p>",
+            "row_content": "<p>It is a all-natural anti-caking agent and helps with mixing in liquids so you don't get clumps. Silicon dioxide, also known as silica or SiO2, is a naturally occurring compound. It's made of silicon and oxygen. Both elements are abundant on our planet. If you've held a rock or touched sand, you've encountered silicon dioxide Certain studies have shown that silicon is an essential mineral for the body and helps build strong bones, hair, nails, and teeth. It may have anti-aging effects and help prevent symptoms tied to deficiencies in silicon, such as: <\/p><ul><li>abnormal growth • weak bones <\/li><li>deformities in skull and peripheral bones<\/li><li>joint pain <\/li><li>poor mineral balance<\/li><\/ul>",
             "page": ""
           }
         },
@@ -604,7 +595,7 @@
       },
       "block_order": [
         "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-1",
-        "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-2",
+        "e14861da-8c25-4ff1-9169-8e8e1cfa6462",
         "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-3",
         "template--21039849799998__e3493cd4-82b6-4f01-8df7-f5497146e455-collapsible_row-4",
         "e02f389b-3d9d-4a8f-a3b6-d380edc74e82"

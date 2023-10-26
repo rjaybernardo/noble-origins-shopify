@@ -688,22 +688,7 @@
   </div>
 </div>
 <script>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   let productData = {}; // Declare productData as a global variable
   const bundleSelectedValue = document.getElementById('bundle-selected-value');
   const bundleRadioButtons = document.querySelectorAll('input[name="Bundle"]');
@@ -738,7 +723,7 @@
 
     const selectedDropdown = root.querySelector('.subscription__select');
     const selectedDropdownValue = selectedDropdown.value;
-
+     selectedOptions.push(selectedDropdownValue);
     // console.log('Selected Dropdown Value:', selectedDropdownValue);
 
      // Check for subscription content
