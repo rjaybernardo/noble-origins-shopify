@@ -28,6 +28,9 @@
 .image-with-text__media--large {
   height: 43.5rem;
 }
+.image-with-text__media--custom {
+  height: 158px;
+}
 
 @media screen and (min-width: 750px) {
   .image-with-text__media--small {
@@ -40,6 +43,9 @@
 
   .image-with-text__media--large {
     height: 69.5rem;
+  }
+  .image-with-text__media--custom {
+    height: 511px;
   }
 }
 
