@@ -5,11 +5,11 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 990px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -17,8 +17,64 @@
   }
 {%- endstyle -%}
 <style>
-  .heading-container {
+  .articles-heading__container {
     width: 100%;
+  }
+
+  .articles-heading__container,
+  .articles-heading__container h2 {
+    font-family: League Spartan;
+  }
+  .articles-heading__container h2 {
+    font-size: clamp(24px, 4vw, 40px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  .articles-heading__container p {
+    font-size: clamp(16px, 2.3vw, 22px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 92.5%;
+    margin: 5px auto 0;
+    max-width: 295px;
+  }
+  .article-card__content {
+    background: #eee;
+    font-family: League Spartan;
+  }
+  .article-card__content h2 {
+    font-family: League Spartan;
+    color: #2f2f2f;
+    font-size: clamp(14px, 2.25vw, 22px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .nb-blog__posts {
+    padding: 0 25px;
+  }
+  .article-card .card__heading {
+    margin-bottom: 0;
+  }
+  .article-card__excerpt {
+    margin-top: 0;
+  }
+  @media (min-width: 750px) {
+    .articles-heading__container p {
+      margin: 16px auto 0;
+    }
+    .grid--2-col-desktop .grid__item:nth-child(3),
+    .grid--2-col-desktop .grid__item:nth-child(4),
+    .grid--2-col-desktop .grid__item:nth-child(5) {
+      width: 30%;
+    }
+    .articles-heading__container p {
+      max-width: 647px;
+    }
   }
 </style>
 {%- liquid
@@ -33,7 +89,7 @@
     {%- unless section.settings.heading == blank -%}
       <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
         <div
-          class="heading-container   {{ section.settings.content_alignment }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="articles-heading__container   {{ section.settings.content_alignment }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
           {% endif %}
@@ -66,14 +122,14 @@
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
         id="Slider-{{ section.id }}"
-        class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
+        class="nb-blog__posts blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}nb-slider--mobile{% endif %}"
         role="list"
       >
         {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
           {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
             <li
               id="Slide-{{ section.id }}-{{ forloop.index }}"
-              class="blog__post grid__item article slider__slide slider__slide--full-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              class=" blog__post grid__item article slider__slide slider__slide--full-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
               {% if settings.animations_reveal_on_scroll %}
                 data-cascade
                 style="--animation-order: {{ forloop.index }};"
@@ -122,8 +178,8 @@
                         </div>
                       </div>
                     {%- endif -%}
-                    <div class="card__content">
-                      <div class="card__information">
+                    <div class=" card__content">
+                      <div class=" card__information">
                         <h3 class="card__heading h2">
                           {{ 'sections.featured_blog.onboarding_title' | t }}
                         </h3>
@@ -133,7 +189,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="card__content">
+                  <div class="article-card__content card__content">
                     <div class="card__information">
                       <h3 class="card__heading h2">
                         {{ 'sections.featured_blog.onboarding_title' | t }}
@@ -199,7 +255,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.featured-blog.name",
+  "name": "Noble Origins Blog Posts",
   "tag": "section",
   "disabled_on": {
     "groups": ["header", "footer"]
@@ -208,7 +264,7 @@
     {
       "type": "inline_richtext",
       "id": "heading",
-      "default": "Blog posts",
+      "default": "Noble ARticles",
       "label": "t:sections.featured-blog.settings.heading.label"
     },
     {
@@ -266,9 +322,9 @@
       "type": "range",
       "id": "post_limit",
       "min": 2,
-      "max": 8,
+      "max": 7,
       "step": 1,
-      "default": 3,
+      "default": 7,
       "label": "t:sections.featured-blog.settings.post_limit.label"
     },
     {
@@ -277,7 +333,7 @@
       "min": 1,
       "max": 4,
       "step": 1,
-      "default": 3,
+      "default": 2,
       "label": "t:sections.featured-blog.settings.columns_desktop.label"
     },
     {
@@ -324,7 +380,7 @@
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
-      "default": 36
+      "default": 100
     },
     {
       "type": "range",
@@ -334,12 +390,12 @@
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "default": 100
     }
   ],
   "presets": [
     {
-      "name": "t:sections.featured-blog.presets.name"
+      "name": "Noble Origins Blog Posts"
     }
   ]
 }

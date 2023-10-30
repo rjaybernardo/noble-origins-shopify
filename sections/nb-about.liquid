@@ -2,8 +2,8 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.35 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.35 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -22,7 +22,7 @@
     color: #fff;
   }
   .about-us__header h2 {
-    font-size: 48px;
+    font-size: clamp(32px, 5vw, 48px);
     font-style: normal;
     font-weight: 700;
     line-height: 110%; /* 52.8px */
@@ -37,9 +37,11 @@
     line-height: 150%; /* 30px */
   }
   .container {
-    max-width: 840px;
-    height: 470px;
+    width: 100%;
+    max-width: 378px;
+    height: 213px;
     position: relative;
+    margin: 20px auto 0;
   }
   .image-responsive img {
     position: absolute;
@@ -50,7 +52,7 @@
   }
   .about-block {
     margin: 0 auto 100px;
-    font-size: 22px;
+    font-size: clamp(16px, 2.3vw, 22px);
     font-style: normal;
     font-weight: 400;
     line-height: 115%;
@@ -62,8 +64,9 @@
     font-weight: 700;
     line-height: 115%;
   }
-  .about-block [class*='rich-text__'] {
-    padding: 0 40px;
+  .about-block [class*='rich-text__'],
+  .about-block .container .image-responsive img {
+    padding: 0 25px;
   }
   .about-block,
   .about-block h2 {
@@ -98,6 +101,19 @@
   }
   .about-us__button a {
     line-height: 0;
+  }
+
+  @media (min-width: 750px) {
+    .about-block [class*='rich-text__'] {
+      padding: 0 40px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 840px;
+      height: 470px;
+      margin: 30px auto 0;
+    }
   }
 </style>
 <div class=" isolate{% unless section.settings.full_width %} page-width{% endunless %}">

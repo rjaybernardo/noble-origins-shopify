@@ -85,27 +85,29 @@
         "padding_bottom": 36
       }
     },
-    "abd8604b-c9b1-41af-86d6-218e016ed158": {
-      "type": "featured-blog",
+    "2c3f083a-1b65-476d-8503-1514b1597e29": {
+      "type": "nb-featured-blog",
       "settings": {
-        "heading": "Noble Articles",
+        "heading": "Noble ARticles",
         "heading_size": "h1",
-        "blog": "noble-articles",
-        "post_limit": 3,
-        "columns_desktop": 3,
+        "text": "Helping people live better lives through animal-based nutrition",
+        "content_alignment": "center",
+        "blog": "",
+        "post_limit": 7,
+        "columns_desktop": 2,
         "color_scheme": "",
         "show_image": true,
         "show_date": true,
         "show_author": false,
         "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
   "order": [
     "ab345075-0bb4-446e-b0a5-e51f7c1a66e1",
     "main",
-    "abd8604b-c9b1-41af-86d6-218e016ed158"
+    "2c3f083a-1b65-476d-8503-1514b1597e29"
   ]
 }
