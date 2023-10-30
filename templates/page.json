@@ -11,23 +11,113 @@
     "23946f12-6f48-4b3b-8fd9-ac1a2106a12b": {
       "type": "nb-about",
       "blocks": {
-        "template--21039850029374__23946f12-6f48-4b3b-8fd9-ac1a2106a12b-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "template--21039850029374__23946f12-6f48-4b3b-8fd9-ac1a2106a12b-text-1": {
+        "28e770c1-79df-4af7-99c0-a61f354a5f6f": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Struggling with digestive issues? Colostrum, the first milk a lactating mother produces, could be your ticket to gut health.<br\/><br\/>This blog post will explore how this nutrient-rich substance boosts the immune system and promotes a healthy and balanced gut microbiome.<br\/>Stick around; you wouldn't want to miss out on achieving optimal gut health!\"<\/p><p><\/p><p><\/p>"
           }
         },
-        "template--21039850029374__23946f12-6f48-4b3b-8fd9-ac1a2106a12b-button-1": {
+        "ca288997-9ce3-4572-9bcb-b2745cb2a3ce": {
+          "type": "heading",
+          "settings": {
+            "heading": "Key Takeaways",
+            "heading_size": "h2"
+          }
+        },
+        "669a1dde-9070-4711-bf24-c6d26b9e71ee": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Colostrum, the first milk after childbirth, is nutrient-dense and good for gut health<\/li><li>It helps fight diseases like Leaky Gut Syndrome and Runner's Trots by repairing the gut lining.<\/li><li>The immune system can get a boost from colostrum to fight harmful bacteria.<\/li><li>Using probiotics with colostrum creates a healthy balance in your gut.<\/li><li>Colostrum supplements are great for weight control, balancing hormones, plus skin and hair health. <\/li><li>Kids over one year can also benefit from colostrum for their nutritional needs.<\/li><\/ul>"
+          }
+        },
+        "150f25f2-466c-45c3-b09c-a7eb100314f7": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Is Colostrum?",
+            "heading_size": "h2"
+          }
+        },
+        "f7f719db-8570-41db-9459-e44fc3985a8b": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Colostrum, often called the 'first milk,' is a nutrient-rich fluid mammals produce after giving birth.<br\/>It's packed with immune-boosting properties and essential nutrients, ideal for newborns.<br\/><br\/>In human health circles, bovine colostrum gained recognition due to its high concentrations of immunoglobulins like IgG that battle gut pathogens.<br\/><br\/>Not just for babies, adults can also reap the benefits of colostrum for overall health and well-being.<br\/>Its remarkable ability to preserve gut health and strengthen immunity makes it an integral part of early life nutrition and beyond.<\/p>"
+          }
+        },
+        "65a3a33f-9426-4ce1-90c5-d1c7bba92ffb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_57_bc986ef5-6c58-4c37-85ac-a2d04898b9f4.png"
+          }
+        },
+        "e4ddff63-401a-4ac4-aaf4-faac56b8376c": {
+          "type": "heading",
+          "settings": {
+            "heading": "How Colostrum Promotes Gut Health",
+            "heading_size": "h2"
+          }
+        },
+        "414d516b-abaf-4dbe-bdd9-d3e53574e983": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Noble Origins, we're deeply rooted in a mission to harness nature's most potent ingredients for optimal health.<br\/><br\/>Colostrum is a testament to this commitment.<\/p>"
+          }
+        },
+        "4bad9942-e0a1-4845-a295-5a656926d38a": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why colostrum is essential for your gut?",
+            "heading_size": "h2"
+          }
+        },
+        "bed689c3-fbce-4a85-9ef3-4324b1647cd6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Colostrum isn't just any supplement; it's nature's first food. It's packed with nutrients and antibodies that play a pivotal role in promoting gut health.<br\/><br\/>If you've ever faced issues like Leaky Gut Syndrome, you'll appreciate how colostrum aids in repairing the gut lining, ensuring a robust defense against harmful invaders.<\/p>"
+          }
+        },
+        "28b4aa88-044a-409e-835d-b77313aa6c07": {
+          "type": "heading",
+          "settings": {
+            "heading": "Runners, take note!",
+            "heading_size": "h2"
+          }
+        },
+        "7c78ffba-adc8-448d-a066-58509fc4f10f": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those who love the thrill of the run but dread the 'Runner's Trots' that sometimes follow, colostrum can be your ally.<br\/><br\/>It soothes your digestive system and strengthens the gut barrier, ensuring you can focus on your pace, not your stomach.<\/p>"
+          }
+        },
+        "829a9cde-2ed0-4f11-9457-1405c298d506": {
+          "type": "heading",
+          "settings": {
+            "heading": "Facing autoimmune challenges?",
+            "heading_size": "h2"
+          }
+        },
+        "18983636-ce90-4fb3-84ac-4a8bbf986192": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Autoimmune conditions can wreak havoc on the gut. But with colostrum's unique components, there's hope.<br\/><br\/>It helps restore balance, ensuring your gut remains a fortress against unwanted pathogens.<\/p>"
+          }
+        },
+        "e25dfb4a-dcf3-4f35-8e5b-6969bbd690b9": {
+          "type": "heading",
+          "settings": {
+            "heading": "NSAID users, here's your natural defense",
+            "heading_size": "h2"
+          }
+        },
+        "19d2d106-a1a6-4191-9c03-f8b45afb94c9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Regular NSAID use can sometimes lead to GI disorders. But with colostrum in your corner, you have a natural defense mechanism.<br\/><br\/>Its rich immunoglobulins combat gut pathogens, offering relief and protection.<\/p>"
+          }
+        },
+        "b4b811ae-96f0-4714-9f82-a3e95242a77e": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Load more",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -37,14 +127,29 @@
         }
       },
       "block_order": [
-        "template--21039850029374__23946f12-6f48-4b3b-8fd9-ac1a2106a12b-heading-1",
-        "template--21039850029374__23946f12-6f48-4b3b-8fd9-ac1a2106a12b-text-1",
-        "template--21039850029374__23946f12-6f48-4b3b-8fd9-ac1a2106a12b-button-1"
+        "28e770c1-79df-4af7-99c0-a61f354a5f6f",
+        "ca288997-9ce3-4572-9bcb-b2745cb2a3ce",
+        "669a1dde-9070-4711-bf24-c6d26b9e71ee",
+        "150f25f2-466c-45c3-b09c-a7eb100314f7",
+        "f7f719db-8570-41db-9459-e44fc3985a8b",
+        "65a3a33f-9426-4ce1-90c5-d1c7bba92ffb",
+        "e4ddff63-401a-4ac4-aaf4-faac56b8376c",
+        "414d516b-abaf-4dbe-bdd9-d3e53574e983",
+        "4bad9942-e0a1-4845-a295-5a656926d38a",
+        "bed689c3-fbce-4a85-9ef3-4324b1647cd6",
+        "28b4aa88-044a-409e-835d-b77313aa6c07",
+        "7c78ffba-adc8-448d-a066-58509fc4f10f",
+        "829a9cde-2ed0-4f11-9457-1405c298d506",
+        "18983636-ce90-4fb3-84ac-4a8bbf986192",
+        "e25dfb4a-dcf3-4f35-8e5b-6969bbd690b9",
+        "19d2d106-a1a6-4191-9c03-f8b45afb94c9",
+        "b4b811ae-96f0-4714-9f82-a3e95242a77e"
       ],
       "settings": {
         "heading": "The Role of Colostrum in Promoting Gut Health",
         "heading_size": "h1",
         "text": "<p>Published: March 31, 2023<\/p>",
+        "about_us_image": "shopify:\/\/shop_images\/image_56_1.png",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
