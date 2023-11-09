@@ -285,6 +285,7 @@
         "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-1": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/plant_1.png",
             "title": "Elite Grass-Fed Beef Protein",
             "text": "<p>21g per serving.<\/p>",
             "link_label": "",
@@ -294,6 +295,7 @@
         "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-2": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/meat_1.png",
             "title": "Full Beast Nutrition",
             "text": "<p>Organs, collagen, and more.<\/p>",
             "link_label": "",
@@ -303,6 +305,7 @@
         "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-3": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/muscles_1_1.png",
             "title": "Pure Strength",
             "text": "<p>No fillers.<\/p>",
             "link_label": "",
@@ -312,6 +315,7 @@
         "393f99eb-98a9-4df8-9198-4215acc1a075": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/guts_1.png",
             "title": "Gentle & Fierce",
             "text": "<p>Good for the gut, great for goals.<\/p>",
             "link_label": "",
@@ -426,6 +430,7 @@
         "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-1": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_2_1.svg",
             "title": "Made in the USA",
             "text": "",
             "link_label": "",
@@ -435,6 +440,7 @@
         "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-2": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Artboard_3_2_2.png",
             "title": "Unchanged and authentic",
             "text": "",
             "link_label": "",
@@ -444,6 +450,7 @@
         "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-3": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Artboard_3_4.png",
             "title": "State of the art Manufacturing",
             "text": "",
             "link_label": "",
