@@ -40,7 +40,7 @@
         "template--21039849799998__00f1ac00-317f-4c9e-8cf7-179ee90d0bed-ratings-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/productbannerimage.png",
+        "image": "shopify:\/\/shop_images\/Untitled-1_1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -60,7 +60,6 @@
         "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/leaf_1.svg",
             "title": "Natural Ingredients",
             "text": "",
             "link_label": "",
@@ -70,7 +69,6 @@
         "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/muscles_1.svg",
             "title": "Enhances Performance",
             "text": "",
             "link_label": "",
@@ -80,7 +78,6 @@
         "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/planet-earth_1.svg",
             "title": "Regenerative Farming",
             "text": "",
             "link_label": "",
@@ -90,7 +87,6 @@
         "17832638-7d03-466e-bd44-228984f8d1aa": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gluten-free_1.svg",
             "title": "Allergen-Free & Gut-Friendly",
             "text": "",
             "link_label": "",
@@ -157,7 +153,6 @@
         "64b32c2c-cbad-441d-a3c9-cd935b7f0e67": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/section1-4.png",
             "title": "High in Calories or Added Sugars",
             "text": "<p>Some whey supplements have added sugars or are high in calories which can lead to weight gain if not accounted for.<\/p>",
             "link_label": "",
@@ -201,7 +196,6 @@
         "b3033007-db88-4237-ab1a-71e154086efa": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/section2-1.jpg",
             "title": "Artificial Additives: A Quick Fix?",
             "text": "<p>Our protein is sourced from pure, natural ingredients, ensuring efficacy without the artificial additives.<\/p>",
             "link_label": "",
@@ -211,7 +205,6 @@
         "a3162e14-7ad5-42c3-86ce-81d7b5bc98f5": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/section2-2.jpg",
             "title": "Cutting Corners with Budget Proteins",
             "text": "<p>We offer a premium animal-sourced protein blend, delivering high-quality nutrients in every scoop.<\/p>",
             "link_label": "",
@@ -221,7 +214,6 @@
         "ab8800b0-519d-4854-a98d-0b2b66b67810": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/section2-3.jpg",
             "title": "Personalized Protein Ignored",
             "text": "<p>Tailored for Paleo, Keto, and Carnivore diets, free from common allergens, such as soy, wheat, and lactose.<\/p>",
             "link_label": "",
@@ -241,7 +233,6 @@
         "6590a482-bd59-4c2e-80d2-a34418e2f6a7": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/section2-7.jpg",
             "title": "Unethical Sourcing: An Unseen Consequence",
             "text": "<p>Many experience bloating and digestive discomfort from whey proteins.<\/p>",
             "link_label": "",
@@ -286,7 +277,6 @@
         "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/plant_1.svg",
             "title": "Elite Grass-Fed Beef Protein",
             "text": "<p>21g per serving.<\/p>",
             "link_label": "",
@@ -296,7 +286,6 @@
         "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/meat_1.png",
             "title": "Full Beast Nutrition",
             "text": "<p>Organs, collagen, and more.<\/p>",
             "link_label": "",
@@ -306,7 +295,6 @@
         "template--21039849799998__3ce3c577-b76e-45bb-ba8b-53e77e606fdc-column-3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/muscles_1_1.svg",
             "title": "Pure Strength",
             "text": "<p>No fillers.<\/p>",
             "link_label": "",
@@ -316,7 +304,6 @@
         "393f99eb-98a9-4df8-9198-4215acc1a075": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/guts_1.svg",
             "title": "Gentle & Fierce",
             "text": "<p>Good for the gut, great for goals.<\/p>",
             "link_label": "",
@@ -431,7 +418,6 @@
         "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Asset_2_1.svg",
             "title": "Made in the USA",
             "text": "",
             "link_label": "",
@@ -441,7 +427,6 @@
         "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_3_2_2.png",
             "title": "Unchanged and authentic",
             "text": "",
             "link_label": "",
@@ -451,7 +436,6 @@
         "template--21039849799998__9ef23cae-2267-4cc4-adf6-1285d235762d-column-3": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_3_4.png",
             "title": "State of the art Manufacturing",
             "text": "",
             "link_label": "",
