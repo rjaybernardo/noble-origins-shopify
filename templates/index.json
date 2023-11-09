@@ -60,6 +60,7 @@
         "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-1": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/leaf_1.png",
             "title": "Natural Ingredients",
             "text": "",
             "link_label": "",
@@ -69,6 +70,7 @@
         "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-2": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/muscles_1.png",
             "title": "Enhances Performance",
             "text": "",
             "link_label": "",
@@ -78,6 +80,7 @@
         "template--21039849799998__9663f077-58ab-461e-9267-fae84d650595-column-3": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/planet-earth_1.png",
             "title": "Regenerative Farming",
             "text": "",
             "link_label": "",
@@ -87,6 +90,7 @@
         "17832638-7d03-466e-bd44-228984f8d1aa": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/gluten-free_1.png",
             "title": "Allergen-Free & Gut-Friendly",
             "text": "",
             "link_label": "",
