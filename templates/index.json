@@ -200,6 +200,7 @@
         "b3033007-db88-4237-ab1a-71e154086efa": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/man-adding-protein-powder-into-plastic-bottle-table_1_8d4cea8b-0c6e-40b9-84b3-ba229984446e.png",
             "title": "Artificial Additives: A Quick Fix?",
             "text": "<p>Our protein is sourced from pure, natural ingredients, ensuring efficacy without the artificial additives.<\/p>",
             "link_label": "",
@@ -209,6 +210,7 @@
         "a3162e14-7ad5-42c3-86ce-81d7b5bc98f5": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/jar-protein-powder-food-with-protein-isolated-white_1_1.png",
             "title": "Cutting Corners with Budget Proteins",
             "text": "<p>We offer a premium animal-sourced protein blend, delivering high-quality nutrients in every scoop.<\/p>",
             "link_label": "",
@@ -218,6 +220,7 @@
         "ab8800b0-519d-4854-a98d-0b2b66b67810": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/handsome-young-sportsman-holding-sport-nutrition-using-laptop-computer_2_1.png",
             "title": "Personalized Protein Ignored",
             "text": "<p>Tailored for Paleo, Keto, and Carnivore diets, free from common allergens, such as soy, wheat, and lactose.<\/p>",
             "link_label": "",
@@ -237,6 +240,7 @@
         "6590a482-bd59-4c2e-80d2-a34418e2f6a7": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/herd-cows-grazing-pasture-during-daytime_1.png",
             "title": "Unethical Sourcing: An Unseen Consequence",
             "text": "<p>Many experience bloating and digestive discomfort from whey proteins.<\/p>",
             "link_label": "",
